@@ -100,11 +100,11 @@ nav a:hover { opacity: 1; color: var(--dark); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* Hero Section with Tri-Linked Cropped Background Blend (Rocket + Plane Lock + Carrier) */
+/* Splash Hero Section with Tri-Linked Cropped Background Blend */
 .hero {
   position: relative;
   color: #fff;
-  background: rgba(28, 36, 46, 0.65);
+  background: rgba(28, 36, 46, 0.72);
   padding: 92px 0 108px;
   overflow: hidden;
 }
@@ -114,9 +114,9 @@ nav a:hover { opacity: 1; color: var(--dark); }
   z-index: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  opacity: 0.38;
+  opacity: 0.42;
   pointer-events: none;
-  filter: contrast(1.1);
+  filter: contrast(1.15);
 }
 .hero-bg-collage img {
   width: 100%;
@@ -246,7 +246,7 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Experience Section with Subtle Transparent Video Background */
+/* Experience Section with Transparent Video Background */
 .exp-sec {
   position: relative;
   overflow: hidden;
@@ -255,7 +255,7 @@ h2 {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.18;
+  opacity: 0.35;
   overflow: hidden;
   pointer-events: none;
 }
@@ -316,7 +316,7 @@ h2 {
 .card ul { padding-left: 18px; }
 .card li { margin-bottom: 4px; }
 
-/* Projects Section (Pyramid / Staircase Shape with Clear Background View) */
+/* Projects Section (Pyramid / Staircase Shape over Sam Turret Background) */
 .dark {
   position: relative;
   background: var(--darker);
@@ -327,7 +327,7 @@ h2 {
   position: absolute;
   inset: 0;
   background: url("images/sam turret.jpeg") center / cover no-repeat;
-  opacity: 0.22;
+  opacity: 0.28;
   filter: contrast(1.15);
   pointer-events: none;
   z-index: 1;
@@ -459,7 +459,7 @@ h2 {
   background: linear-gradient(transparent, rgba(24, 30, 38, 0.92));
 }
 
-/* Skills Hover Grid with sit.jpg (11.42.09 PM (3)) background */
+/* Skills Hover Grid with sit.jpg background */
 .skills-sec {
   position: relative;
   background:
@@ -636,12 +636,12 @@ footer .btn { margin: 5px; }
   </div>
 </header>
 
-<!-- Splash Hero with Rocket (Left) + Plane Lock (Center) + Carrier (Right) -->
+<!-- Splash Hero with Rocket + Plane Lock + Carrier -->
 <div class="hero" id="top">
   <div class="hero-bg-collage">
-    <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3).jpg" alt="Rocket Launch">
+    <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3)_3.jpg" alt="Rocket Launch">
     <img src="images/lock plane.jpeg" alt="Plane Lock HUD">
-    <img src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpeg" alt="Carrier Launch">
+    <img src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM_4.jpeg" alt="Carrier Launch">
   </div>
   <div class="wrap">
     <div>
@@ -731,6 +731,18 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
+          <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1)_3.jpg" alt="Robotics insights in Shanghai University" loading="lazy">
+        </div>
+        <div class="b">
+          <span class="tag">Robotics &amp; Global R&amp;D</span>
+          <h3>Shanghai University Robotics Insights</h3>
+          <div class="meta">Shanghai Study Trip · R&amp;D Exchange</div>
+          <p>Furthered insights in Shanghai, meeting with the head of machine learning, networking with the school principal, and collaborating with robotics enthusiasts.</p>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card-img">
           <img src="images/pan sit.jpg" alt="Brainstorming with DSTA & Panasonic personnel in North-East Singapore" loading="lazy">
         </div>
         <div class="b">
@@ -752,18 +764,6 @@ footer .btn { margin: 5px; }
           <p>Collaborated with Manta Go in partnership with Meta to build advanced chatbots, and connected with leaders like Andy Low from the AI Association Singapore.</p>
         </div>
       </article>
-
-      <article class="card fade">
-        <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-31 at 12.33.54 AM.jpeg" alt="Asher and mentor" loading="lazy">
-        </div>
-        <div class="b">
-          <span class="tag">Mentorship</span>
-          <h3>Advisory &amp; Record Review</h3>
-          <div class="meta">Commercial &amp; Technical Mentorship</div>
-          <p>Engaging directly with expert mentors to refine system architectures, financial compliance checks, and operational engineering pathways.</p>
-        </div>
-      </article>
     </div>
   </div>
 </section>
@@ -776,7 +776,7 @@ footer .btn { margin: 5px; }
     <h2>Projects</h2>
     
     <div class="pyramid-grid">
-      <!-- Step 1: Top Shortest Block -->
+      <!-- Step 1: Top Shortest Block (Custom FPV Drone with drone fpv.jpg) -->
       <button class="proj-stair step-1 fade" data-m="m3" style="background-image:url('images/drone fpv.jpg')">
         <small>Hardware &amp; Telemetry</small>
         <h3>Custom FPV Drone</h3>
@@ -784,15 +784,15 @@ footer .btn { margin: 5px; }
         <em>View technical breakdown →</em>
       </button>
 
-      <!-- Step 2: Middle Medium Block -->
-      <button class="proj-stair step-2 fade" data-m="m2" style="background-image:url('images/sam turret.jpeg')">
+      <!-- Step 2: Middle Medium Block (AI Study App with study app.webp) -->
+      <button class="proj-stair step-2 fade" data-m="m2" style="background-image:url('images/study app.webp')">
         <small>Full-Stack AI</small>
         <h3>AI Study App</h3>
         <p>Notion-style workspace with computer-vision OCR, Gemini API flashcard generation, and translation into 5 languages on AWS.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <!-- Step 3: Bottom Longest Block -->
+      <!-- Step 3: Bottom Longest Block (Trading System) -->
       <button class="proj-stair step-3 fade" data-m="m1" style="background-image:url('images/cv planes.jpeg')">
         <small>Autonomous Markets</small>
         <h3>Trading System</h3>
@@ -817,7 +817,7 @@ footer .btn { margin: 5px; }
   </div>
 </div>
 
-<!-- In The Field with Sam Turret Background & Corrected Shared Images -->
+<!-- In The Field (Featuring RoboMaster / Robotics card & correct images) -->
 <section id="field" style="position:relative; overflow:hidden;">
   <div style="position:absolute; inset:0; background:url('images/sam turret.jpeg') center/cover no-repeat; opacity:0.12; pointer-events:none; z-index:0;"></div>
   <div class="wrap" style="position:relative; z-index:2;">
@@ -829,8 +829,8 @@ footer .btn { margin: 5px; }
         <figcaption>Panasonic Works: Robotics R&amp;D</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/ehang.jpg" alt="EHang autonomous passenger drone in Shanghai" loading="lazy">
-        <figcaption>Shanghai Study Trip: EHang Autonomous AAV</figcaption>
+        <img src="images/lenovo robo.jpeg" alt="Lenovo Future Center site visit" loading="lazy">
+        <figcaption>Lenovo Future Center: Robotics Site Visit</figcaption>
       </figure>
       <figure class="fade">
         <img src="images/carrier-launch.jpg" alt="Aircraft carrier launch" loading="lazy">
@@ -841,8 +841,8 @@ footer .btn { margin: 5px; }
         <figcaption>Google Cloud AI Hackathon Showcase</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-31 at 12.33.57 AM.jpeg" alt="AI-GNITION stage talk at SIM" loading="lazy">
-        <figcaption>AI-GNITION: Student Panel Presentation</figcaption>
+        <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1)_4.jpg" alt="RoboMaster competition robotics brainstorming" loading="lazy">
+        <figcaption>RoboMaster: Brainstorming Solutions for Competition Robots</figcaption>
       </figure>
     </div>
   </div>
@@ -1007,4 +1007,3 @@ document.querySelectorAll('.fade').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
-```[cite: 85, 86, 87, 88, 89, 90, 91, 92, 93, 94]
