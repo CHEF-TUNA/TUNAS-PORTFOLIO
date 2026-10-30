@@ -100,25 +100,15 @@ nav a:hover { opacity: 1; color: var(--dark); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* Splash Hero Banner (Ideation Style) */
+/* Splash Hero Banner */
 .hero {
   position: relative;
   color: #fff;
   background:
     linear-gradient(105deg, rgba(28, 36, 46, 0.90) 22%, rgba(35, 43, 54, 0.62) 58%, rgba(63, 74, 87, 0.35)),
-    url("images/WhatsApp Image 2026-10-30 at 11.42.08 PM (1).jpg") center 40% / cover no-repeat;
+    url("images/lock plane.jpeg") center 40% / cover no-repeat;
   padding: 92px 0 108px;
   overflow: hidden;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
 }
 .hero .wrap {
   position: relative;
@@ -172,7 +162,6 @@ nav a:hover { opacity: 1; color: var(--dark); }
 }
 .btn:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.22); }
 .btn.primary { background: #fff; color: var(--dark); border-color: #fff; font-weight: 600; }
-.btn.primary:hover { background: var(--pale); }
 .btn svg { width: 18px; height: 18px; fill: currentColor; }
 
 /* Orbital Portrait Ring */
@@ -244,7 +233,7 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Experience Cards (All 4 with Images) */
+/* Experience Cards */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -295,7 +284,7 @@ h2 {
 .card ul { padding-left: 18px; }
 .card li { margin-bottom: 5px; }
 
-/* Projects Section (Image-backed Interactive Tiles) */
+/* Projects Section */
 .dark {
   background: var(--darker);
   color: #e6ecf3;
@@ -349,7 +338,7 @@ h2 {
   color: #6ee7b7;
 }
 
-/* Parallax Financial & Aviation Banner */
+/* Parallax Band */
 .parallax-band {
   position: relative;
   padding: 96px 0;
@@ -357,7 +346,7 @@ h2 {
   text-align: center;
   background:
     linear-gradient(180deg, rgba(35, 43, 54, 0.82), rgba(35, 43, 54, 0.86)),
-    url("images/WhatsApp Image 2026-10-30 at 11.42.07 PM.jpg") center / cover fixed;
+    url("images/sam turret.jpeg") center / cover fixed;
 }
 .parallax-band h2 { color: #fff; margin-bottom: 16px; }
 .parallax-band p {
@@ -386,7 +375,7 @@ h2 {
   opacity: 0.85;
 }
 
-/* In The Field Photo Grid */
+/* Field Grid */
 .field {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -416,12 +405,12 @@ h2 {
   background: linear-gradient(transparent, rgba(24, 30, 38, 0.92));
 }
 
-/* Hover-Reveal Skills Grid */
+/* Skills Hover Grid */
 .skills-sec {
   position: relative;
   background:
     linear-gradient(rgba(233, 238, 244, 0.92), rgba(233, 238, 244, 0.92)),
-    url("images/WhatsApp Image 2026-10-30 at 11.42.06 PM (1).jpeg") center / cover;
+    url("images/google.jpg") center / cover;
 }
 .skills {
   display: grid;
@@ -533,7 +522,7 @@ footer {
   position: relative;
   background:
     linear-gradient(rgba(35, 43, 54, 0.88), rgba(28, 36, 46, 0.95)),
-    url("images/WhatsApp Image 2026-10-30 at 11.42.06 PM (2).jpeg") center / cover;
+    url("images/lock plane.jpeg") center / cover;
   color: var(--pale);
   text-align: center;
   padding: 76px 0 42px;
@@ -620,13 +609,13 @@ footer .btn { margin: 5px; }
       <div class="orbit-outer"></div>
       <div class="orbit-inner"></div>
       <div class="ring">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.09 PM (1).jpeg" alt="Portrait of Asher Heng in a navy suit">
+        <img src="images/portrait.jpg" alt="Portrait of Asher Heng in a navy suit">
       </div>
     </div>
   </div>
 </div>
 
-<!-- Experience (All 4 Cards Image-Backed) -->
+<!-- Experience -->
 <section id="experience">
   <div class="wrap">
     <div class="eyebrow">Applied AI · FinTech · Robotics</div>
@@ -634,7 +623,7 @@ footer .btn { margin: 5px; }
     <div class="grid-2">
       <article class="card fade">
         <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-30 at 11.42.08 PM (2).jpeg" alt="SUTD campus" loading="lazy">
+          <img src="images/sutd.jpg" alt="SUTD campus" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Teaching &amp; Facilitation</span>
@@ -646,7 +635,7 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM.jpg" alt="Tech Week Singapore AI Stage" loading="lazy">
+          <img src="images/techweek.jpg" alt="Tech Week Singapore AI Stage" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Hackathon · IBM</span>
@@ -662,7 +651,7 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1).jpg" alt="Autonomous Robotics Turret Hardware" loading="lazy">
+          <img src="images/robots.jpg" alt="Autonomous Robotics Turret Hardware" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Hackathon · DSTA</span>
@@ -678,47 +667,47 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-30 at 11.42.09 PM (2).jpeg" alt="OCBC Financial & Tech Hub" loading="lazy">
+          <img src="images/mentor.jpg" alt="Asher and mentor" loading="lazy">
         </div>
         <div class="b">
-          <span class="tag">Markets &amp; Commercial</span>
-          <h3>Market Research &amp; Personal Investing</h3>
-          <div class="meta">Ongoing · Independent</div>
-          <p>Researching equities, macro news, and market structure to make informed decisions, while assisting with financial checks and record review in the family business.</p>
+          <span class="tag">Mentorship &amp; Collaboration</span>
+          <h3>Technical &amp; Mentorship Engagements</h3>
+          <div class="meta">DSTA &amp; Industry Collaborations</div>
+          <p>Collaborating directly with industry mentors and defense engineering leads to align computer-vision and agentic software architectures with rigorous operational standards.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- Projects (All 4 Image-Backed with Modals) -->
+<!-- Projects -->
 <section id="projects" class="dark">
   <div class="wrap">
     <div class="eyebrow">Interactive Prototypes</div>
     <h2>Projects</h2>
     <div class="grid-2">
-      <button class="proj fade" data-m="m1" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.05 PM (2).jpeg')">
+      <button class="proj fade" data-m="m1" style="background-image:url('images/cv planes.jpeg')">
         <small>Autonomous Markets</small>
         <h3>Trading System</h3>
         <p>UiPath bot with web scraping that tracks stock prices and triggers simulated trades, paired with a backpropagation neural network on market data.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <button class="proj fade" data-m="m2" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.05 PM (1).jpeg')">
+      <button class="proj fade" data-m="m2" style="background-image:url('images/sam turret.jpeg')">
         <small>Full-Stack AI</small>
         <h3>AI Study App</h3>
         <p>Notion-style workspace with computer-vision OCR, Gemini API flashcard generation, and translation into 5 languages on AWS.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <button class="proj fade" data-m="m3" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3).jpg'); background-position: center 20%;">
+      <button class="proj fade" data-m="m3" style="background-image:url('images/carrier-launch.jpg'); background-position: center;">
         <small>Hardware &amp; Telemetry</small>
         <h3>Custom FPV Drone</h3>
         <p>Designed, soldered, and tuned from scratch—bridging software control loops with real-world flight mechanics.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <button class="proj fade" data-m="m4" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.08 PM.jpg')">
+      <button class="proj fade" data-m="m4" style="background-image:url('images/sim-talk.jpg')">
         <small>Apps &amp; Interfaces</small>
         <h3>Flutter &amp; UI Design</h3>
         <p>Clean, responsive multi-platform mobile application interfaces built with Flutter.</p>
@@ -728,7 +717,7 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Parallax High-Altitude Strategy Band -->
+<!-- Parallax Band -->
 <div class="parallax-band">
   <div class="wrap fade">
     <div class="eyebrow" style="justify-content:center;color:var(--pale)">Commercial Instinct · Engineering Rigor</div>
@@ -742,31 +731,31 @@ footer .btn { margin: 5px; }
   </div>
 </div>
 
-<!-- In The Field (Robotics, Aviation, Global Summits) -->
+<!-- In The Field -->
 <section id="field">
   <div class="wrap">
     <div class="eyebrow">Networks, Robotics &amp; Aviation</div>
     <h2>In the Field</h2>
     <div class="field">
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.08 PM (3).jpg" alt="Asher at Panasonic Works Company with autonomous robot" loading="lazy">
+        <img src="images/panasonic.jpg" alt="Asher at Panasonic Works Company with autonomous robot" loading="lazy">
         <figcaption>Panasonic Works: Autonomous Mobile Robots</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (2).jpg" alt="Asher beside EHang autonomous passenger drone in Shanghai" loading="lazy">
+        <img src="images/ehang.jpg" alt="Asher beside EHang autonomous passenger drone in Shanghai" loading="lazy">
         <figcaption>Shanghai Study Trip: EHang Autonomous AAV</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM.jpg" alt="Asher beside twin-prop aircraft at Seletar Airport" loading="lazy">
+        <img src="images/plane.jpg" alt="Asher beside twin-prop aircraft at Seletar Airport" loading="lazy">
         <figcaption>Seletar Aerospace: General Aviation</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM.jpg" alt="Tech Week Singapore main stage" loading="lazy">
-        <figcaption>Tech Week Singapore: Enterprise AI</figcaption>
+        <img src="images/sim-talk.jpg" alt="AI-GNITION stage talk at SIM" loading="lazy">
+        <figcaption>AI-GNITION: Student Panel Presentation</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1).jpg" alt="Mecanum wheel robotics hardware" loading="lazy">
-        <figcaption>Robotics Hardware &amp; Omni-Drive Systems</figcaption>
+        <img src="images/google.jpg" alt="Google Cloud Hackathon Booth Team" loading="lazy">
+        <figcaption>Google Cloud AI Hackathon Showcase</figcaption>
       </figure>
     </div>
   </div>
@@ -778,15 +767,15 @@ footer .btn { margin: 5px; }
     <div class="eyebrow">Beyond the Classroom</div>
     <h2>Leadership &amp; CCAs</h2>
     <div class="lead fade">
-      <div class="lead-card" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.09 PM.jpg')">
+      <div class="lead-card" style="background-image:url('images/sutd.jpg')">
         <h4>Founder &amp; President, Temasek Cooking Club</h4>
         <p>Grew the club to 50+ members and led the finance and socials committees.</p>
       </div>
-      <div class="lead-card" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.08 PM (3).jpg')">
+      <div class="lead-card" style="background-image:url('images/robots.jpg')">
         <h4>Team Leader, Robotics CCA</h4>
         <p>Led the competition team in the Lego Mindstorms robotics challenge.</p>
       </div>
-      <div class="lead-card" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.06 PM (3).jpg')">
+      <div class="lead-card" style="background-image:url('images/lock plane.jpeg')">
         <h4>Makers Club</h4>
         <p>3D printing, rapid prototyping, and CAD modelling with Tinkercad.</p>
       </div>
@@ -794,42 +783,42 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- AI Skills & Prompt Engineering (Hover-Reveal Image Cards) -->
+<!-- AI Skills & Prompt Engineering -->
 <section id="skills" class="skills-sec">
   <div class="wrap">
     <div class="eyebrow">Technical Core &amp; Prompt Engineering</div>
     <h2>Skills</h2>
     <div class="skills">
       <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.05 PM (2).jpeg')"></div>
+        <div class="skill-bg" style="background-image:url('images/cv planes.jpeg')"></div>
         <div>
           <h4>AI &amp; ML</h4>
           <p>Python, computer vision, OCR, NLP, Hugging Face, Gemini API, neural networks, structured prompt engineering</p>
         </div>
       </div>
       <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.05 PM (1).jpeg')"></div>
+        <div class="skill-bg" style="background-image:url('images/sam turret.jpeg')"></div>
         <div>
           <h4>Agents &amp; Automation</h4>
           <p>watsonx Orchestrate, IBM Bob, UiPath RPA, web scraping, human-in-the-loop workflows</p>
         </div>
       </div>
       <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.07 PM (2).jpeg')"></div>
+        <div class="skill-bg" style="background-image:url('images/plane.jpg')"></div>
         <div>
           <h4>Build &amp; Deploy</h4>
           <p>Flutter, UI design, Git/GitHub, AWS, Render</p>
         </div>
       </div>
       <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.07 PM (1).jpeg')"></div>
+        <div class="skill-bg" style="background-image:url('images/carrier-launch.jpg')"></div>
         <div>
           <h4>Markets &amp; Making</h4>
           <p>TradingView, algorithmic trading, FPV drones, 3D printing (Tinkercad)</p>
         </div>
       </div>
       <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/WhatsApp Image 2026-10-30 at 11.42.06 PM.jpeg')"></div>
+        <div class="skill-bg" style="background-image:url('images/portrait.jpg')"></div>
         <div>
           <h4>People</h4>
           <p>Team leadership, public teaching, bilingual in English and Mandarin</p>
@@ -839,27 +828,27 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Off the Clock / Global Perspective -->
+<!-- Perspective -->
 <section id="perspective">
   <div class="wrap">
     <div class="eyebrow">Travel &amp; Global Mindset</div>
     <h2>Perspective</h2>
     <div class="field">
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.07 PM (2).jpeg" alt="Waterfall with rainbow" loading="lazy">
-        <figcaption>Pacific Northwest: Cascades</figcaption>
+        <img src="images/g4.jpg" alt="Palace of Fine Arts San Francisco" loading="lazy">
+        <figcaption>San Francisco: Bay Area</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.06 PM.jpeg" alt="Alpine meadow" loading="lazy">
-        <figcaption>Swiss Alps: High Altitude</figcaption>
-      </figure>
-      <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.06 PM (2).jpeg" alt="Sunset over the sea" loading="lazy">
+        <img src="images/g3.jpg" alt="Sunset over the sea" loading="lazy">
         <figcaption>Northern Horizons</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.06 PM (1).jpeg" alt="Palace of Fine Arts San Francisco" loading="lazy">
-        <figcaption>San Francisco: Bay Area</figcaption>
+        <img src="images/g2.jpg" alt="Alpine meadow" loading="lazy">
+        <figcaption>Swiss Alps: High Altitude</figcaption>
+      </figure>
+      <figure class="fade">
+        <img src="images/g1.jpg" alt="Waterfall with rainbow" loading="lazy">
+        <figcaption>Pacific Northwest: Cascades</figcaption>
       </figure>
     </div>
   </div>
@@ -876,7 +865,7 @@ footer .btn { margin: 5px; }
   </div>
 </footer>
 
-<!-- Project Deep-Dive Modals -->
+<!-- Modals -->
 <dialog id="m1">
   <button aria-label="Close">×</button>
   <small>Autonomous Markets</small>
@@ -903,7 +892,7 @@ footer .btn { margin: 5px; }
 </dialog>
 
 <dialog id="m3">
-  <button aria-label="Close">×</button>
+  <button aria-label="Root">×</button>
   <small>Hardware</small>
   <h3>Custom FPV Drone</h3>
   <p>Designed and built an FPV quadcopter from scratch—linking software control loops and telemetry to real-world aerodynamics.</p>
