@@ -100,15 +100,30 @@ nav a:hover { opacity: 1; color: var(--dark); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* Splash Hero Banner */
+/* Hero Section with Tri-Linked Cropped Background Blend (Rocket + Plane Lock + Carrier) */
 .hero {
   position: relative;
   color: #fff;
   background:
-    linear-gradient(105deg, rgba(28, 36, 46, 0.90) 22%, rgba(35, 43, 54, 0.62) 58%, rgba(63, 74, 87, 0.35)),
-    url("images/lock plane.jpeg") center 40% / cover no-repeat;
+    linear-gradient(105deg, rgba(28, 36, 46, 0.88) 25%, rgba(35, 43, 54, 0.55) 60%, rgba(63, 74, 87, 0.3)),
+    url("images/lock plane.jpeg") center 30% / cover no-repeat;
   padding: 92px 0 108px;
   overflow: hidden;
+}
+.hero-bg-collage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  opacity: 0.28;
+  pointer-events: none;
+  filter: blur(1px);
+}
+.hero-bg-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .hero .wrap {
   position: relative;
@@ -233,7 +248,26 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Experience Cards (Grid of 3 columns for better fit with the new cards) */
+/* Experience Section with Video Background Header */
+.exp-sec {
+  position: relative;
+  overflow: hidden;
+}
+.video-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.08;
+  overflow: hidden;
+  pointer-events: none;
+}
+.video-bg-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.exp-sec .wrap { position: relative; z-index: 2; }
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -284,18 +318,39 @@ h2 {
 .card ul { padding-left: 18px; }
 .card li { margin-bottom: 4px; }
 
-/* Projects Section */
+/* Projects Section (Pyramid / Staircase Shape to Clear Turret View) */
 .dark {
+  position: relative;
   background: var(--darker);
   color: #e6ecf3;
+  overflow: hidden;
 }
+.proj-bg-layer {
+  position: absolute;
+  inset: 0;
+  background: url("images/sam turret.jpeg") center / cover no-repeat;
+  opacity: 0.18;
+  filter: contrast(1.1);
+  pointer-events: none;
+  z-index: 1;
+}
+.dark .wrap { position: relative; z-index: 2; }
 .dark h2, .dark h3 { color: #fff; }
 .dark .eyebrow { color: rgba(213, 221, 231, 0.75); }
-.proj {
+
+/* Pyramid / Staircase Project Layout */
+.pyramid-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.proj-stair {
   position: relative;
-  border: 1px solid rgba(213, 221, 231, 0.22);
-  border-radius: 20px;
-  padding: 130px 26px 26px;
+  border: 1px solid rgba(213, 221, 231, 0.28);
+  border-radius: 18px;
+  padding: 26px;
   cursor: pointer;
   text-align: left;
   color: #fff;
@@ -304,38 +359,41 @@ h2 {
   transition: 0.35s;
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
-.proj::before {
+.proj-stair::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(24, 30, 38, 0.25) 0%, rgba(24, 30, 38, 0.88) 65%, rgba(24, 30, 38, 0.96) 100%);
+  background: linear-gradient(90deg, rgba(24, 30, 38, 0.94) 30%, rgba(24, 30, 38, 0.75) 70%, rgba(24, 30, 38, 0.4));
   transition: 0.35s;
 }
-.proj:hover { transform: translateY(-5px); border-color: var(--gold); }
-.proj:hover::before {
-  background: linear-gradient(180deg, rgba(24, 30, 38, 0.12) 0%, rgba(24, 30, 38, 0.82) 65%, rgba(24, 30, 38, 0.94) 100%);
-}
-.proj > * { position: relative; z-index: 2; }
-.proj small {
+.proj-stair:hover { transform: translateY(-4px); border-color: var(--gold); }
+.proj-stair > * { position: relative; z-index: 2; }
+.proj-stair small {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold);
   font-weight: 600;
 }
-.proj h3 { font-size: 1.4rem; margin: 6px 0 8px; }
-.proj p { font-size: 0.88rem; font-weight: 300; opacity: 0.9; }
-.proj em {
+.proj-stair h3 { font-size: 1.3rem; margin: 4px 0 6px; }
+.proj-stair p { font-size: 0.86rem; font-weight: 300; opacity: 0.9; max-width: 600px; }
+.proj-stair em {
   display: inline-block;
-  margin-top: 14px;
-  font-size: 0.8rem;
+  margin-top: 10px;
+  font-size: 0.78rem;
   font-style: normal;
   font-weight: 500;
   color: #6ee7b7;
+}
+
+/* Staircase Width Steps */
+.step-1 { width: 70%; align-self: flex-start; }
+.step-2 { width: 82%; align-self: center; }
+.step-3 { width: 95%; align-self: flex-end; }
+@media (max-width: 768px) {
+  .step-1, .step-2, .step-3 { width: 100%; align-self: stretch; }
 }
 
 /* Parallax Band */
@@ -405,12 +463,12 @@ h2 {
   background: linear-gradient(transparent, rgba(24, 30, 38, 0.92));
 }
 
-/* Skills Hover Grid */
+/* Skills Hover Grid with sit.jpg background */
 .skills-sec {
   position: relative;
   background:
     linear-gradient(rgba(233, 238, 244, 0.92), rgba(233, 238, 244, 0.92)),
-    url("images/pan sit.jpg") center / cover;
+    url("images/sit.jpg") center / cover;
 }
 .skills {
   display: grid;
@@ -582,8 +640,13 @@ footer .btn { margin: 5px; }
   </div>
 </header>
 
-<!-- Splash Hero -->
+<!-- Splash Hero with Tri-Linked Cropped Background Blend (Rocket + Plane Lock + Carrier) -->
 <div class="hero" id="top">
+  <div class="hero-bg-collage">
+    <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3).jpg" alt="Rocket Launch">
+    <img src="images/lock plane.jpeg" alt="Plane Lock HUD">
+    <img src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpeg" alt="Carrier Launch">
+  </div>
   <div class="wrap">
     <div>
       <div class="chips">
@@ -615,8 +678,13 @@ footer .btn { margin: 5px; }
   </div>
 </div>
 
-<!-- Experience (Expanded to 6 Cards to fit all unique engagements) -->
-<section id="experience">
+<!-- Experience with Video Background Header -->
+<section id="experience" class="exp-sec">
+  <div class="video-bg-wrap">
+    <video autoplay muted loop playsinline>
+      <source src="images/WhatsApp Video 2026-10-31 at 12.41.05 AM.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="wrap">
     <div class="eyebrow">Applied AI · FinTech · Robotics</div>
     <h2>Experience</h2>
@@ -704,37 +772,35 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Projects -->
+<!-- Projects (Pyramid / Staircase Shape to Clear Turret View in Background) -->
 <section id="projects" class="dark">
+  <div class="proj-bg-layer"></div>
   <div class="wrap">
     <div class="eyebrow">Interactive Prototypes</div>
     <h2>Projects</h2>
-    <div class="grid-2">
-      <button class="proj fade" data-m="m1" style="background-image:url('images/cv planes.jpeg')">
-        <small>Autonomous Markets</small>
-        <h3>Trading System</h3>
-        <p>UiPath bot with web scraping that tracks stock prices and triggers simulated trades, paired with a backpropagation neural network on market data.</p>
-        <em>View technical breakdown →</em>
-      </button>
-
-      <button class="proj fade" data-m="m2" style="background-image:url('images/sam turret.jpeg')">
-        <small>Full-Stack AI</small>
-        <h3>AI Study App</h3>
-        <p>Notion-style workspace with computer-vision OCR, Gemini API flashcard generation, and translation into 5 languages on AWS.</p>
-        <em>View technical breakdown →</em>
-      </button>
-
-      <button class="proj fade" data-m="m3" style="background-image:url('images/drone fpv.jpg'); background-position: center;">
+    
+    <div class="pyramid-grid">
+      <!-- Step 1: Shortest block at top -->
+      <button class="proj-stair step-1 fade" data-m="m3" style="background-image:url('images/drone fpv.jpg')">
         <small>Hardware &amp; Telemetry</small>
         <h3>Custom FPV Drone</h3>
         <p>Designed, soldered, and tuned from scratch—bridging software control loops with real-world flight mechanics.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <button class="proj fade" data-m="m4" style="background-image:url('images/sim-talk.jpg')">
-        <small>Apps &amp; Interfaces</small>
-        <h3>Flutter &amp; UI Design</h3>
-        <p>Clean, responsive multi-platform mobile application interfaces built with Flutter.</p>
+      <!-- Step 2: Medium block in middle -->
+      <button class="proj-stair step-2 fade" data-m="m2" style="background-image:url('images/carrier-launch.jpg')">
+        <small>Full-Stack AI</small>
+        <h3>AI Study App</h3>
+        <p>Notion-style workspace with computer-vision OCR, Gemini API flashcard generation, and translation into 5 languages on AWS.</p>
+        <em>View technical breakdown →</em>
+      </button>
+
+      <!-- Step 3: Longest block at bottom -->
+      <button class="proj-stair step-3 fade" data-m="m1" style="background-image:url('images/cv planes.jpeg')">
+        <small>Autonomous Markets</small>
+        <h3>Trading System</h3>
+        <p>UiPath bot with web scraping that tracks stock prices and triggers simulated trades, paired with a backpropagation neural network on historical market data.</p>
         <em>View technical breakdown →</em>
       </button>
     </div>
@@ -762,7 +828,7 @@ footer .btn { margin: 5px; }
     <h2>In the Field</h2>
     <div class="field">
       <figure class="fade">
-        <img src="images/pan sit.jpg" alt="Panasonic Works site engagement" loading="lazy">
+        <img src="images/panasonic.jpg" alt="Panasonic Works site engagement" loading="lazy">
         <figcaption>Panasonic Works: Robotics R&amp;D</figcaption>
       </figure>
       <figure class="fade">
@@ -778,7 +844,7 @@ footer .btn { margin: 5px; }
         <figcaption>Google Cloud AI Hackathon Showcase</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/sim-talk.jpg" alt="AI-GNITION stage talk at SIM" loading="lazy">
+        <img src="images/WhatsApp Image 2026-10-31 at 12.33.57 AM.jpeg" alt="AI-GNITION stage talk at SIM" loading="lazy">
         <figcaption>AI-GNITION: Student Panel Presentation</figcaption>
       </figure>
     </div>
@@ -807,7 +873,7 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- AI Skills & Prompt Engineering -->
+<!-- AI Skills & Prompt Engineering with sit.jpg background -->
 <section id="skills" class="skills-sec">
   <div class="wrap">
     <div class="eyebrow">Technical Core &amp; Prompt Engineering</div>
@@ -852,19 +918,19 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Perspective -->
+<!-- Perspective with Northern Horizons (g3.jpg) & 11.42.07 PM -->
 <section id="perspective">
   <div class="wrap">
     <div class="eyebrow">Travel &amp; Global Mindset</div>
     <h2>Perspective</h2>
     <div class="field">
       <figure class="fade">
-        <img src="images/g4.jpg" alt="Palace of Fine Arts San Francisco" loading="lazy">
-        <figcaption>San Francisco: Bay Area</figcaption>
+        <img src="images/g3.jpg" alt="Northern Horizons" loading="lazy">
+        <figcaption>Northern Horizons &amp; Expedition</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/g3.jpg" alt="Sunset over the sea" loading="lazy">
-        <figcaption>Northern Horizons</figcaption>
+        <img src="images/WhatsApp Image 2026-10-30 at 11.42.07 PM_2.jpg" alt="Faroe Islands waterfall" loading="lazy">
+        <figcaption>Faroe Islands: Coastal Topography</figcaption>
       </figure>
       <figure class="fade">
         <img src="images/g2.jpg" alt="Alpine meadow" loading="lazy">
