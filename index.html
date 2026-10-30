@@ -104,9 +104,7 @@ nav a:hover { opacity: 1; color: var(--dark); }
 .hero {
   position: relative;
   color: #fff;
-  background:
-    linear-gradient(105deg, rgba(28, 36, 46, 0.88) 25%, rgba(35, 43, 54, 0.55) 60%, rgba(63, 74, 87, 0.3)),
-    url("images/lock plane.jpeg") center 30% / cover no-repeat;
+  background: rgba(28, 36, 46, 0.65);
   padding: 92px 0 108px;
   overflow: hidden;
 }
@@ -116,9 +114,9 @@ nav a:hover { opacity: 1; color: var(--dark); }
   z-index: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  opacity: 0.28;
+  opacity: 0.38;
   pointer-events: none;
-  filter: blur(1px);
+  filter: contrast(1.1);
 }
 .hero-bg-collage img {
   width: 100%;
@@ -248,7 +246,7 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Experience Section with Video Background Header */
+/* Experience Section with Subtle Transparent Video Background */
 .exp-sec {
   position: relative;
   overflow: hidden;
@@ -257,7 +255,7 @@ h2 {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.08;
+  opacity: 0.18;
   overflow: hidden;
   pointer-events: none;
 }
@@ -318,7 +316,7 @@ h2 {
 .card ul { padding-left: 18px; }
 .card li { margin-bottom: 4px; }
 
-/* Projects Section (Pyramid / Staircase Shape to Clear Turret View) */
+/* Projects Section (Pyramid / Staircase Shape with Clear Background View) */
 .dark {
   position: relative;
   background: var(--darker);
@@ -329,8 +327,8 @@ h2 {
   position: absolute;
   inset: 0;
   background: url("images/sam turret.jpeg") center / cover no-repeat;
-  opacity: 0.18;
-  filter: contrast(1.1);
+  opacity: 0.22;
+  filter: contrast(1.15);
   pointer-events: none;
   z-index: 1;
 }
@@ -338,7 +336,6 @@ h2 {
 .dark h2, .dark h3 { color: #fff; }
 .dark .eyebrow { color: rgba(213, 221, 231, 0.75); }
 
-/* Pyramid / Staircase Project Layout */
 .pyramid-grid {
   display: flex;
   flex-direction: column;
@@ -348,7 +345,7 @@ h2 {
 }
 .proj-stair {
   position: relative;
-  border: 1px solid rgba(213, 221, 231, 0.28);
+  border: 1px solid rgba(213, 221, 231, 0.35);
   border-radius: 18px;
   padding: 26px;
   cursor: pointer;
@@ -359,13 +356,13 @@ h2 {
   transition: 0.35s;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 .proj-stair::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(24, 30, 38, 0.94) 30%, rgba(24, 30, 38, 0.75) 70%, rgba(24, 30, 38, 0.4));
+  background: linear-gradient(90deg, rgba(24, 30, 38, 0.95) 35%, rgba(24, 30, 38, 0.78) 75%, rgba(24, 30, 38, 0.45));
   transition: 0.35s;
 }
 .proj-stair:hover { transform: translateY(-4px); border-color: var(--gold); }
@@ -388,10 +385,9 @@ h2 {
   color: #6ee7b7;
 }
 
-/* Staircase Width Steps */
 .step-1 { width: 70%; align-self: flex-start; }
-.step-2 { width: 82%; align-self: center; }
-.step-3 { width: 95%; align-self: flex-end; }
+.step-2 { width: 85%; align-self: center; }
+.step-3 { width: 98%; align-self: flex-end; }
 @media (max-width: 768px) {
   .step-1, .step-2, .step-3 { width: 100%; align-self: stretch; }
 }
@@ -463,12 +459,12 @@ h2 {
   background: linear-gradient(transparent, rgba(24, 30, 38, 0.92));
 }
 
-/* Skills Hover Grid with sit.jpg background */
+/* Skills Hover Grid with sit.jpg (11.42.09 PM (3)) background */
 .skills-sec {
   position: relative;
   background:
-    linear-gradient(rgba(233, 238, 244, 0.92), rgba(233, 238, 244, 0.92)),
-    url("images/sit.jpg") center / cover;
+    linear-gradient(rgba(233, 238, 244, 0.90), rgba(233, 238, 244, 0.90)),
+    url("images/WhatsApp Image 2026-10-30 at 11.42.09 PM (3).jpeg") center / cover;
 }
 .skills {
   display: grid;
@@ -640,7 +636,7 @@ footer .btn { margin: 5px; }
   </div>
 </header>
 
-<!-- Splash Hero with Tri-Linked Cropped Background Blend (Rocket + Plane Lock + Carrier) -->
+<!-- Splash Hero with Rocket (Left) + Plane Lock (Center) + Carrier (Right) -->
 <div class="hero" id="top">
   <div class="hero-bg-collage">
     <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3).jpg" alt="Rocket Launch">
@@ -678,7 +674,7 @@ footer .btn { margin: 5px; }
   </div>
 </div>
 
-<!-- Experience with Video Background Header -->
+<!-- Experience with Transparent Video Background -->
 <section id="experience" class="exp-sec">
   <div class="video-bg-wrap">
     <video autoplay muted loop playsinline>
@@ -772,7 +768,7 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Projects (Pyramid / Staircase Shape to Clear Turret View in Background) -->
+<!-- Projects (Pyramid / Staircase Shape over Sam Turret Background) -->
 <section id="projects" class="dark">
   <div class="proj-bg-layer"></div>
   <div class="wrap">
@@ -780,7 +776,7 @@ footer .btn { margin: 5px; }
     <h2>Projects</h2>
     
     <div class="pyramid-grid">
-      <!-- Step 1: Shortest block at top -->
+      <!-- Step 1: Top Shortest Block -->
       <button class="proj-stair step-1 fade" data-m="m3" style="background-image:url('images/drone fpv.jpg')">
         <small>Hardware &amp; Telemetry</small>
         <h3>Custom FPV Drone</h3>
@@ -788,15 +784,15 @@ footer .btn { margin: 5px; }
         <em>View technical breakdown →</em>
       </button>
 
-      <!-- Step 2: Medium block in middle -->
-      <button class="proj-stair step-2 fade" data-m="m2" style="background-image:url('images/carrier-launch.jpg')">
+      <!-- Step 2: Middle Medium Block -->
+      <button class="proj-stair step-2 fade" data-m="m2" style="background-image:url('images/sam turret.jpeg')">
         <small>Full-Stack AI</small>
         <h3>AI Study App</h3>
         <p>Notion-style workspace with computer-vision OCR, Gemini API flashcard generation, and translation into 5 languages on AWS.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <!-- Step 3: Longest block at bottom -->
+      <!-- Step 3: Bottom Longest Block -->
       <button class="proj-stair step-3 fade" data-m="m1" style="background-image:url('images/cv planes.jpeg')">
         <small>Autonomous Markets</small>
         <h3>Trading System</h3>
@@ -821,9 +817,10 @@ footer .btn { margin: 5px; }
   </div>
 </div>
 
-<!-- In The Field -->
-<section id="field">
-  <div class="wrap">
+<!-- In The Field with Sam Turret Background & Corrected Shared Images -->
+<section id="field" style="position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:url('images/sam turret.jpeg') center/cover no-repeat; opacity:0.12; pointer-events:none; z-index:0;"></div>
+  <div class="wrap" style="position:relative; z-index:2;">
     <div class="eyebrow">Networks, Robotics &amp; Aviation</div>
     <h2>In the Field</h2>
     <div class="field">
@@ -836,8 +833,8 @@ footer .btn { margin: 5px; }
         <figcaption>Shanghai Study Trip: EHang Autonomous AAV</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/plane.jpg" alt="Diamond aircraft at Seletar Airport" loading="lazy">
-        <figcaption>Seletar Aerospace: Flight Simulation &amp; Aviation</figcaption>
+        <img src="images/carrier-launch.jpg" alt="Aircraft carrier launch" loading="lazy">
+        <figcaption>Carrier Launch Operations</figcaption>
       </figure>
       <figure class="fade">
         <img src="images/google.jpg" alt="Google Cloud Hackathon Showcase Team" loading="lazy">
@@ -851,9 +848,10 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Leadership & CCAs -->
-<section id="leadership" style="padding-top:0">
-  <div class="wrap">
+<!-- Leadership & CCAs with Carrier Background Shared -->
+<section id="leadership" style="position:relative; overflow:hidden; padding-top:0;">
+  <div style="position:absolute; inset:0; background:url('images/carrier-launch.jpg') center/cover no-repeat; opacity:0.12; pointer-events:none; z-index:0;"></div>
+  <div class="wrap" style="position:relative; z-index:2;">
     <div class="eyebrow">Beyond the Classroom</div>
     <h2>Leadership &amp; CCAs</h2>
     <div class="lead fade">
@@ -873,7 +871,7 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- AI Skills & Prompt Engineering with sit.jpg background -->
+<!-- AI Skills & Prompt Engineering with sit.jpg (11.42.09 PM (3)) background -->
 <section id="skills" class="skills-sec">
   <div class="wrap">
     <div class="eyebrow">Technical Core &amp; Prompt Engineering</div>
@@ -918,7 +916,7 @@ footer .btn { margin: 5px; }
   </div>
 </section>
 
-<!-- Perspective with Northern Horizons (g3.jpg) & 11.42.07 PM -->
+<!-- Perspective with Northern Horizons (g3.jpg) & 11.42.05 IMG -->
 <section id="perspective">
   <div class="wrap">
     <div class="eyebrow">Travel &amp; Global Mindset</div>
@@ -929,8 +927,8 @@ footer .btn { margin: 5px; }
         <figcaption>Northern Horizons &amp; Expedition</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.07 PM_2.jpg" alt="Faroe Islands waterfall" loading="lazy">
-        <figcaption>Faroe Islands: Coastal Topography</figcaption>
+        <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (1).jpeg" alt="Alpine river & mountain peak" loading="lazy">
+        <figcaption>Alpine Summit &amp; Glacier Flow</figcaption>
       </figure>
       <figure class="fade">
         <img src="images/g2.jpg" alt="Alpine meadow" loading="lazy">
@@ -1009,3 +1007,4 @@ document.querySelectorAll('.fade').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
+```[cite: 85, 86, 87, 88, 89, 90, 91, 92, 93, 94]
