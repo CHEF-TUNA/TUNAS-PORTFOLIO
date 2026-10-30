@@ -30,7 +30,7 @@ body {
 }
 h1, h2, h3, h4, .logo { font-family: 'Lato', sans-serif; color: var(--dark); }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+img, video { max-width: 100%; display: block; }
 .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
 /* Sticky Header + Lockheed Jet Swoop */
@@ -233,11 +233,11 @@ h2 {
   text-transform: uppercase;
 }
 
-/* Experience Cards */
-.grid-2 {
+/* Experience Cards (Grid of 3 columns for better fit with the new cards) */
+.grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 .card {
   background: var(--card);
@@ -254,7 +254,7 @@ h2 {
   box-shadow: 0 18px 36px rgba(63, 74, 87, 0.16);
 }
 .card-img {
-  height: 220px;
+  height: 200px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -266,7 +266,7 @@ h2 {
   transition: transform 0.6s ease;
 }
 .card:hover .card-img img { transform: scale(1.06); }
-.card .b { padding: 24px 26px 28px; flex: 1; }
+.card .b { padding: 22px 24px 26px; flex: 1; }
 .tag {
   display: inline-block;
   font-size: 0.65rem;
@@ -278,11 +278,11 @@ h2 {
   padding: 4px 11px;
   border-radius: 6px;
 }
-.card h3 { font-size: 1.25rem; margin: 10px 0 3px; }
-.meta { font-size: 0.76rem; color: rgba(63, 74, 87, 0.65); margin-bottom: 12px; font-weight: 500; }
-.card p, .card li { font-size: 0.88rem; font-weight: 300; }
+.card h3 { font-size: 1.2rem; margin: 10px 0 3px; }
+.meta { font-size: 0.76rem; color: rgba(63, 74, 87, 0.65); margin-bottom: 10px; font-weight: 500; }
+.card p, .card li { font-size: 0.86rem; font-weight: 300; }
 .card ul { padding-left: 18px; }
-.card li { margin-bottom: 5px; }
+.card li { margin-bottom: 4px; }
 
 /* Projects Section */
 .dark {
@@ -410,7 +410,7 @@ h2 {
   position: relative;
   background:
     linear-gradient(rgba(233, 238, 244, 0.92), rgba(233, 238, 244, 0.92)),
-    url("images/google.jpg") center / cover;
+    url("images/pan sit.jpg") center / cover;
 }
 .skills {
   display: grid;
@@ -615,12 +615,12 @@ footer .btn { margin: 5px; }
   </div>
 </div>
 
-<!-- Experience -->
+<!-- Experience (Expanded to 6 Cards to fit all unique engagements) -->
 <section id="experience">
   <div class="wrap">
     <div class="eyebrow">Applied AI · FinTech · Robotics</div>
     <h2>Experience</h2>
-    <div class="grid-2">
+    <div class="grid-3">
       <article class="card fade">
         <div class="card-img">
           <img src="images/sutd.jpg" alt="SUTD campus" loading="lazy">
@@ -651,7 +651,7 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/robots.jpg" alt="Autonomous Robotics Turret Hardware" loading="lazy">
+          <img src="images/WhatsApp Image 2026-10-31 at 1.37.03 AM.jpeg" alt="TIL-AI Missile Turret System" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Hackathon · DSTA</span>
@@ -667,13 +667,37 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/mentor.jpg" alt="Asher and mentor" loading="lazy">
+          <img src="images/pan sit.jpg" alt="Brainstorming with DSTA & Panasonic personnel in North-East Singapore" loading="lazy">
         </div>
         <div class="b">
-          <span class="tag">Mentorship &amp; Collaboration</span>
-          <h3>Technical &amp; Mentorship Engagements</h3>
-          <div class="meta">DSTA &amp; Industry Collaborations</div>
-          <p>Collaborating directly with industry mentors and defense engineering leads to align computer-vision and agentic software architectures with rigorous operational standards.</p>
+          <span class="tag">Technical &amp; Mentorship</span>
+          <h3>Industry Innovation Labs</h3>
+          <div class="meta">DSTA &amp; Panasonic Collaboration</div>
+          <p>Worked closely with industry personnel and DSTA/Panasonic teams in Singapore's North-East to brainstorm automation topics and co-design robotics workflows.</p>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card-img">
+          <img src="images/WhatsApp Image 2026-10-31 at 12.33.57 AM.jpeg" alt="SIM Stage Talk with Manta Go & Meta" loading="lazy">
+        </div>
+        <div class="b">
+          <span class="tag">Venture &amp; Partnerships</span>
+          <h3>Manta Go &amp; Meta Partnership</h3>
+          <div class="meta">SIM Panel Presentation</div>
+          <p>Collaborated with Manta Go in partnership with Meta to build advanced chatbots, and connected with leaders like Andy Low from the AI Association Singapore.</p>
+        </div>
+      </article>
+
+      <article class="card fade">
+        <div class="card-img">
+          <img src="images/WhatsApp Image 2026-10-31 at 12.33.54 AM.jpeg" alt="Asher and mentor" loading="lazy">
+        </div>
+        <div class="b">
+          <span class="tag">Mentorship</span>
+          <h3>Advisory &amp; Record Review</h3>
+          <div class="meta">Commercial &amp; Technical Mentorship</div>
+          <p>Engaging directly with expert mentors to refine system architectures, financial compliance checks, and operational engineering pathways.</p>
         </div>
       </article>
     </div>
@@ -700,7 +724,7 @@ footer .btn { margin: 5px; }
         <em>View technical breakdown →</em>
       </button>
 
-      <button class="proj fade" data-m="m3" style="background-image:url('images/carrier-launch.jpg'); background-position: center;">
+      <button class="proj fade" data-m="m3" style="background-image:url('images/drone fpv.jpg'); background-position: center;">
         <small>Hardware &amp; Telemetry</small>
         <h3>Custom FPV Drone</h3>
         <p>Designed, soldered, and tuned from scratch—bridging software control loops with real-world flight mechanics.</p>
@@ -738,24 +762,24 @@ footer .btn { margin: 5px; }
     <h2>In the Field</h2>
     <div class="field">
       <figure class="fade">
-        <img src="images/panasonic.jpg" alt="Asher at Panasonic Works Company with autonomous robot" loading="lazy">
-        <figcaption>Panasonic Works: Autonomous Mobile Robots</figcaption>
+        <img src="images/pan sit.jpg" alt="Panasonic Works site engagement" loading="lazy">
+        <figcaption>Panasonic Works: Robotics R&amp;D</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/ehang.jpg" alt="Asher beside EHang autonomous passenger drone in Shanghai" loading="lazy">
+        <img src="images/ehang.jpg" alt="EHang autonomous passenger drone in Shanghai" loading="lazy">
         <figcaption>Shanghai Study Trip: EHang Autonomous AAV</figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/plane.jpg" alt="Asher beside twin-prop aircraft at Seletar Airport" loading="lazy">
-        <figcaption>Seletar Aerospace: General Aviation</figcaption>
+        <img src="images/plane.jpg" alt="Diamond aircraft at Seletar Airport" loading="lazy">
+        <figcaption>Seletar Aerospace: Flight Simulation &amp; Aviation</figcaption>
+      </figure>
+      <figure class="fade">
+        <img src="images/google.jpg" alt="Google Cloud Hackathon Showcase Team" loading="lazy">
+        <figcaption>Google Cloud AI Hackathon Showcase</figcaption>
       </figure>
       <figure class="fade">
         <img src="images/sim-talk.jpg" alt="AI-GNITION stage talk at SIM" loading="lazy">
         <figcaption>AI-GNITION: Student Panel Presentation</figcaption>
-      </figure>
-      <figure class="fade">
-        <img src="images/google.jpg" alt="Google Cloud Hackathon Booth Team" loading="lazy">
-        <figcaption>Google Cloud AI Hackathon Showcase</figcaption>
       </figure>
     </div>
   </div>
@@ -892,7 +916,7 @@ footer .btn { margin: 5px; }
 </dialog>
 
 <dialog id="m3">
-  <button aria-label="Root">×</button>
+  <button aria-label="Close">×</button>
   <small>Hardware</small>
   <h3>Custom FPV Drone</h3>
   <p>Designed and built an FPV quadcopter from scratch—linking software control loops and telemetry to real-world aerodynamics.</p>
