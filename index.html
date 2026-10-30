@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asher Heng | Applied AI & Analytics</title>
+<meta name="description" content="Asher Heng: Applied AI student at Temasek Polytechnic who builds and leads.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pale:#D5DDE7;--dark:#3F4A57;--text:#3D444D;--bg:#F3F6FA;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4,.logo{font-family:Lato,sans-serif;color:var(--dark)}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:rgba(243,246,250,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(63,74,87,.12)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:900;letter-spacing:.14em;font-size:1rem}.logo span{font-weight:700;opacity:.55;margin-left:6px}
+nav{display:flex;gap:26px;font-size:.85rem;font-weight:500}nav a{opacity:.75}nav a:hover{opacity:1}
+.hero{position:relative;color:#fff;background:linear-gradient(105deg,rgba(35,43,54,.92) 25%,rgba(35,43,54,.45)),url(images/hero.jpg) center 35%/cover;padding:84px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3)}
+.hero h1{color:#fff;font-weight:900;font-size:clamp(2.8rem,7vw,5.2rem);line-height:.98;letter-spacing:.01em}
+.hero p{max-width:520px;margin:22px 0 30px;font-weight:300;font-size:1.08rem;opacity:.92}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:500;font-size:.9rem;transition:.25s;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.1);color:#fff}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.22)}.btn.primary{background:#fff;color:var(--dark);border-color:#fff}
+.btn svg{width:18px;height:18px;fill:currentColor}
+.ring{width:min(340px,70vw);aspect-ratio:1;border-radius:50%;padding:7px;margin:auto;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(213,221,231,.3));box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 22%}
+section{padding:84px 0}.eyebrow{font:900 .72rem Lato;letter-spacing:.2em;text-transform:uppercase;color:rgba(63,74,87,.6)}
+h2{font-weight:900;font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:.03em;margin:4px 0 36px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid rgba(213,221,231,.9);border-radius:18px;overflow:hidden;box-shadow:0 2px 10px rgba(63,74,87,.06);transition:.3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(63,74,87,.14)}
+.card img{height:200px;width:100%;object-fit:cover}.card .b{padding:22px 24px 26px}
+.tag{display:inline-block;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(213,221,231,.7);color:var(--dark);padding:3px 10px;border-radius:6px}
+.card h3{font-size:1.2rem;margin:10px 0 2px}.meta{font-size:.76rem;color:rgba(63,74,87,.65);margin-bottom:10px}.card p,.card li{font-size:.88rem;font-weight:300}
+.card ul{padding-left:18px}
+.dark{background:var(--dark);color:#e6ecf3}.dark h2,.dark h3{color:#fff}.dark .eyebrow{color:rgba(213,221,231,.7)}
+.proj{background:rgba(255,255,255,.05);border:1px solid rgba(213,221,231,.18);border-radius:16px;padding:26px;cursor:pointer;text-align:left;color:inherit;font:inherit;transition:.25s}
+.proj:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}.proj small{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.65}
+.proj h3{font-size:1.35rem;margin:6px 0 8px}.proj p{font-size:.88rem;font-weight:300;opacity:.85}.proj em{display:block;margin-top:14px;font-size:.78rem;font-style:normal;color:#8fd9b0}
+dialog{border:0;border-radius:18px;max-width:600px;width:92%;padding:34px;box-shadow:0 30px 80px rgba(0,0,0,.4);margin:auto}
+dialog::backdrop{background:rgba(35,43,54,.8);backdrop-filter:blur(4px)}
+dialog h3{font-size:1.7rem;margin:6px 0 14px}dialog p,dialog li{font-size:.92rem;font-weight:300;margin-bottom:10px}dialog ul{padding-left:18px}
+dialog button{position:absolute;top:14px;right:18px;border:0;background:none;font-size:1.7rem;cursor:pointer;color:var(--dark)}
+.field{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.field figure{position:relative;border-radius:16px;overflow:hidden;height:300px}.field img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.field figure:hover img{transform:scale(1.06)}.field figcaption{position:absolute;inset:auto 0 0;padding:34px 16px 14px;color:#fff;font-size:.82rem;font-weight:500;background:linear-gradient(transparent,rgba(30,38,48,.85))}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.skill{background:#fff;border:1px solid var(--pale);border-radius:16px;padding:24px}.skill h4{font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}.skill p{font-size:.84rem;font-weight:300}
+.lead{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.lead div{border-left:3px solid var(--dark);padding:6px 0 6px 18px}.lead h4{font-size:1.05rem}.lead p{font-size:.88rem;font-weight:300}
+footer{background:var(--dark);color:var(--pale);text-align:center;padding:64px 0 36px}
+footer h2{color:#fff;margin-bottom:10px}footer p{font-weight:300;margin-bottom:26px}footer .btn{margin:4px}
+.copy{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-top:40px}
+.fade{opacity:0;transform:translateY(22px);transition:all .8s cubic-bezier(.16,1,.3,1)}.fade.show{opacity:1;transform:none}
+@media(max-width:820px){nav{display:none}.hero .wrap{grid-template-columns:1fr;text-align:left}.ring{order:-1;width:240px}section{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.fade{opacity:1;transform:none}}
+</style></head><body>
+<header><div class="wrap"><a href="#top" class="logo">ASHER HENG<span>// AI & BUILDER</span></a>
+<nav><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#field">In the field</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+
+<div class="hero" id="top"><div class="wrap"><div>
+<div class="chips"><span class="chip">Agentic AI</span><span class="chip">Computer Vision</span><span class="chip">Algorithmic Trading</span></div>
+<h1>I BUILD &amp;<br>I LEAD.</h1>
+<p>Applied AI &amp; Analytics student at Temasek Polytechnic. I build AI systems, lead hackathon teams and teach 50+ students how to use AI well.</p>
+<div class="btns"><a class="btn primary" href="#projects">Explore Projects</a>
+<a class="btn" href="https://github.com/CHEF-TUNA" target="_blank" rel="noopener"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/asherhengtuna/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></div>
+</div><div class="ring"><img src="images/portrait.jpg" alt="Portrait of Asher Heng in a navy suit"></div></div></div>
+
+<section id="experience"><div class="wrap"><div class="eyebrow">Where I've led and taught</div><h2>Experience</h2>
+<div class="grid">
+<article class="card fade"><img src="images/sutd.jpg" alt="SUTD campus" loading="lazy"><div class="b"><span class="tag">Teaching</span><h3>AI Facilitator, SUTD</h3><div class="meta">SUTD DAI Fab Lab · Aug 2026 – present</div><p>Student-in-charge teaching 50+ JC students to use AI tools effectively and responsibly: NotebookLM, Gemini, ChatGPT and Claude.</p></div></article>
+<article class="card fade"><div class="b" style="padding-top:30px"><span class="tag">Hackathon · IBM</span><h3>Project Leader, "One Less Thing"</h3><div class="meta">Team of 5 · Aug – Nov 2026</div><ul><li>Led the team, assigned tasks and tracked progress</li><li>Built an agentic AI planner on watsonx Orchestrate and IBM Bob that turns notes into priorities, calendar slots and reminders, with user approval at every step</li><li>Created the pitch deck; deployed on Render with GitHub repos</li></ul></div></article>
+<article class="card fade"><div class="b" style="padding-top:30px"><span class="tag">Hackathon · DSTA</span><h3>Team Leader, TIL-AI</h3><div class="meta">Team of 3</div><ul><li>Managed team progress and helped train every part of the system</li><li>Built a turret that uses object detection to tell friend from foe, civilian from fighter jet, with models trained via Hugging Face</li><li>Trained an NLP model so operators can give orders by voice or text</li></ul></div></article>
+<article class="card fade"><div class="b" style="padding-top:30px"><span class="tag">Independent</span><h3>Market Research &amp; Personal Investing</h3><div class="meta">Ongoing</div><p>Researching stocks and news to make informed decisions, and assisting with financial checks and record review in the family business.</p></div></article>
+</div></div></section>
+
+<section id="projects" class="dark"><div class="wrap"><div class="eyebrow">Things I've built</div><h2>Projects</h2>
+<div class="grid">
+<button class="proj fade" data-m="m1"><small>Autonomous markets</small><h3>Trading System</h3><p>UiPath bot that scrapes prices and triggers simulated trades, plus a neural network on market data.</p><em>Read more →</em></button>
+<button class="proj fade" data-m="m2"><small>Full-stack AI</small><h3>AI Study App</h3><p>Notion-style notes app with OCR, Gemini flashcards and translation into 5 languages.</p><em>Read more →</em></button>
+<button class="proj fade" data-m="m3"><small>Hardware</small><h3>Custom FPV Drone</h3><p>Designed and built from scratch.</p><em>Read more →</em></button>
+<button class="proj fade" data-m="m4"><small>Apps &amp; UI</small><h3>Flutter &amp; UI Design</h3><p>Mobile app interfaces built with Flutter.</p><em>Read more →</em></button>
+</div></div></section>
+
+<section id="leadership"><div class="wrap"><div class="eyebrow">Beyond the classroom</div><h2>Leadership</h2>
+<div class="lead fade">
+<div><h4>Founder &amp; President, Temasek Cooking Club</h4><p>50+ members. Led the finance and socials committees.</p></div>
+<div><h4>Team Leader, Robotics CCA</h4><p>Led the team in the Lego Mindstorms competition.</p></div>
+<div><h4>Makers Club</h4><p>3D printing and design with Tinkercad.</p></div></div></div></section>
+
+<section id="field" style="padding-top:0"><div class="wrap"><div class="eyebrow">Curious about what's next</div><h2>In the field</h2>
+<div class="field">
+<figure class="fade"><img src="images/panasonic.jpg" alt="Panasonic autonomous mobile robot" loading="lazy"><figcaption>Panasonic: autonomous mobile robot</figcaption></figure>
+<figure class="fade"><img src="images/ehang.jpg" alt="EHang autonomous passenger drone" loading="lazy"><figcaption>EHang autonomous passenger drone</figcaption></figure>
+<figure class="fade"><img src="images/techweek.jpg" alt="Tech Week Singapore stage" loading="lazy"><figcaption>Tech Week Singapore</figcaption></figure>
+<figure class="fade"><img src="images/plane.jpg" alt="Asher beside a small aircraft" loading="lazy"><figcaption>Aviation</figcaption></figure>
+<figure class="fade"><img src="images/robots.jpg" alt="Robotics hardware" loading="lazy"><figcaption>Robotics hardware</figcaption></figure></div></div></section>
+
+<section id="skills" style="background:#e9eef4"><div class="wrap"><div class="eyebrow">Toolbox</div><h2>Skills</h2>
+<div class="skills">
+<div class="skill fade"><h4>AI &amp; ML</h4><p>Python, computer vision, OCR, NLP, Hugging Face, Gemini API, neural networks</p></div>
+<div class="skill fade"><h4>Agents &amp; Automation</h4><p>watsonx Orchestrate, IBM Bob, UiPath, web scraping</p></div>
+<div class="skill fade"><h4>Build &amp; Deploy</h4><p>Flutter, UI design, Git/GitHub, AWS, Render</p></div>
+<div class="skill fade"><h4>Markets &amp; Making</h4><p>TradingView, algorithmic trading, FPV drones, 3D printing</p></div>
+<div class="skill fade"><h4>People</h4><p>Team leadership, public teaching. English and Mandarin.</p></div></div></div></section>
+
+<section style="padding:0 0 84px"><div class="wrap"><div class="eyebrow">Off the clock</div><h2>Perspective</h2>
+<div class="field"><figure class="fade"><img src="images/g1.jpg" alt="Waterfall with a rainbow" loading="lazy"></figure><figure class="fade"><img src="images/g2.jpg" alt="Alpine meadow" loading="lazy"></figure><figure class="fade"><img src="images/g3.jpg" alt="Sunset over the sea" loading="lazy"></figure><figure class="fade"><img src="images/g4.jpg" alt="Palace of Fine Arts" loading="lazy"></figure></div></div></section>
+
+<footer id="contact"><div class="wrap"><h2>Let's build something</h2><p>Open to internships, collaborations and hackathon teams.</p>
+<a class="btn primary" href="mailto:tuna.heng2@gmail.com" style="color:var(--dark)">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/asherhengtuna/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/CHEF-TUNA" target="_blank" rel="noopener">GitHub</a>
+<div class="copy">© 2026 Asher Heng · Singapore</div></div></footer>
+
+<dialog id="m1"><button aria-label="Close">×</button><small>Autonomous markets</small><h3>Trading System</h3><p><b>Stack:</b> UiPath, neural network, TradingView, NASDAQ-100 E-mini futures</p><ul><li>UiPath bot with web scraping tracks prices and triggers simulated buy/sell actions when targets or margins are hit</li><li>Neural network trained by backpropagation on market data</li><li>Algorithmic strategy on TradingView. Everything is paper-traded (simulated), with no real money.</li></ul></dialog>
+<dialog id="m2"><button aria-label="Close">×</button><small>Full-stack AI</small><h3>AI Study App</h3><p><b>Stack:</b> Gemini API, OCR / computer vision, AWS, GitHub</p><ul><li>Notion-style notes and study-list app</li><li>OCR on uploaded notes, then Gemini API generates flashcards</li><li>Translation into French, Japanese, Chinese, German and Russian</li><li>Hosted on AWS</li></ul></dialog>
+<dialog id="m3"><button aria-label="Close">×</button><small>Hardware</small><h3>Custom FPV Drone</h3><p>Designed and built an FPV drone from scratch. A hands-on hardware project that links software thinking to real-world flight.</p></dialog>
+<dialog id="m4"><button aria-label="Close">×</button><small>Apps &amp; UI</small><h3>Flutter &amp; UI Design</h3><p><b>Stack:</b> Flutter</p><p>Mobile app interface design and development, built in Makers Club and coursework.</p></dialog>
+<script>
+document.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>document.getElementById(b.dataset.m).showModal());
+document.querySelectorAll('dialog').forEach(d=>{d.querySelector('button').onclick=()=>d.close();d.onclick=e=>{if(e.target===d)d.close()}});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script></body></html>
