@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Asher Heng | Applied AI, Robotics & Finance</title>
-<meta name="description" content="Asher Heng: Applied AI student at Temasek Polytechnic who builds and leads.">
+<meta name="description" content="Asher Heng: Applied AI student at Temasek Polytechnic — Innovation, Action, Execution.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 :root {
   --pale: #D5DDE7;
   --dark: #3F4A57;
-  --darker: #232B36;
+  --darker: #1B222C;
   --text: #3D444D;
   --bg: #F3F6FA;
   --card: #ffffff;
@@ -31,14 +31,14 @@ body {
 h1, h2, h3, h4, .logo { font-family: 'Lato', sans-serif; color: var(--dark); }
 a { color: inherit; text-decoration: none; }
 img, video { max-width: 100%; display: block; }
-.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
-/* Sticky Header + Lockheed Jet Swoop */
+/* Sticky Top Navigation + Lockheed Jet Swoop */
 header {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: rgba(243, 246, 250, 0.88);
+  z-index: 100;
+  background: rgba(243, 246, 250, 0.90);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(63, 74, 87, 0.12);
 }
@@ -100,28 +100,46 @@ nav a:hover { opacity: 1; color: var(--dark); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
-/* Splash Hero Section with Tri-Linked Cropped Background Blend */
+/* Splash Hero: Tri-Linked Background (Left: SpaceX Rocket, Center: Lock Plane, Right: Carrier) */
 .hero {
   position: relative;
   color: #fff;
-  background: rgba(28, 36, 46, 0.72);
+  background: #1c242e;
   padding: 92px 0 108px;
   overflow: hidden;
+  min-height: 86vh;
+  display: flex;
+  align-items: center;
 }
 .hero-bg-collage {
   position: absolute;
   inset: 0;
   z-index: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  opacity: 0.42;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  opacity: 0.58;
   pointer-events: none;
-  filter: contrast(1.15);
+}
+.hero-bg-collage .hero-pane {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 .hero-bg-collage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  filter: contrast(1.08);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(105deg, rgba(20, 27, 36, 0.82) 18%, rgba(28, 36, 46, 0.45) 55%, rgba(20, 27, 36, 0.65) 100%);
+  pointer-events: none;
 }
 .hero .wrap {
   position: relative;
@@ -130,6 +148,7 @@ nav a:hover { opacity: 1; color: var(--dark); }
   grid-template-columns: 1.25fr 0.95fr;
   gap: 44px;
   align-items: center;
+  width: 100%;
 }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .chip {
@@ -139,24 +158,24 @@ nav a:hover { opacity: 1; color: var(--dark); }
   text-transform: uppercase;
   padding: 6px 14px;
   border-radius: 99px;
-  background: rgba(35, 43, 54, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(35, 43, 54, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(6px);
 }
 .hero h1 {
   color: #fff;
   font-weight: 900;
-  font-size: clamp(3rem, 7vw, 5.3rem);
-  line-height: 0.96;
-  letter-spacing: 0.01em;
-  text-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  font-size: clamp(2.6rem, 5.8vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: 0.02em;
+  text-shadow: 0 12px 32px rgba(0,0,0,0.45);
 }
 .hero p {
   max-width: 540px;
   margin: 22px 0 32px;
   font-weight: 300;
   font-size: 1.06rem;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.94);
 }
 .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
@@ -188,14 +207,14 @@ nav a:hover { opacity: 1; color: var(--dark); }
   position: absolute;
   inset: -16px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(255, 255, 255, 0.42);
+  border: 1.5px dashed rgba(255, 255, 255, 0.45);
   animation: spin 36s linear infinite;
 }
 .orbit-inner {
   position: absolute;
   inset: -6px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   border-top-color: #fff;
   animation: spin 18s linear infinite reverse;
 }
@@ -220,13 +239,31 @@ nav a:hover { opacity: 1; color: var(--dark); }
 }
 .ring:hover img { transform: scale(1.04); }
 
-/* Sections & Headings */
+/* Sections & Sticky Top-Left Title Pinning (Pushes Up When Next Section Arrives) */
 section { padding: 84px 0; position: relative; }
+.sticky-title-bar {
+  position: sticky;
+  top: 76px;
+  z-index: 30;
+  display: inline-block;
+  padding: 10px 20px 12px 16px;
+  margin-bottom: 28px;
+  border-radius: 14px;
+  background: rgba(243, 246, 250, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(63, 74, 87, 0.12);
+  box-shadow: 0 8px 24px rgba(35, 43, 54, 0.08);
+}
+.dark .sticky-title-bar {
+  background: rgba(27, 34, 44, 0.86);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
 .eyebrow {
-  font: 900 0.72rem 'Lato', sans-serif;
+  font: 900 0.7rem 'Lato', sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(63, 74, 87, 0.65);
+  color: rgba(63, 74, 87, 0.75);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -240,22 +277,24 @@ section { padding: 84px 0; position: relative; }
 }
 h2 {
   font-weight: 900;
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-size: clamp(1.75rem, 3.6vw, 2.35rem);
   letter-spacing: 0.03em;
-  margin: 6px 0 36px;
+  margin: 2px 0 0;
   text-transform: uppercase;
+  line-height: 1.1;
 }
 
-/* Experience Section with Transparent Video Background */
+/* Experience Section with 100% Original Color/Vibrancy Video Background */
 .exp-sec {
   position: relative;
   overflow: hidden;
+  background: #0d1520;
 }
 .video-bg-wrap {
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.35;
+  opacity: 1;
   overflow: hidden;
   pointer-events: none;
 }
@@ -268,28 +307,30 @@ h2 {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
 .card {
-  background: var(--card);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(213, 221, 231, 0.95);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(63, 74, 87, 0.07);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   transition: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(63, 74, 87, 0.16);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
 }
 .card-img {
-  height: 200px;
+  height: 210px;
   width: 100%;
   overflow: hidden;
   position: relative;
+  background: #232b36;
 }
 .card-img img {
   width: 100%;
@@ -305,68 +346,93 @@ h2 {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(213, 221, 231, 0.75);
+  background: rgba(213, 221, 231, 0.85);
   color: var(--dark);
   padding: 4px 11px;
   border-radius: 6px;
 }
 .card h3 { font-size: 1.2rem; margin: 10px 0 3px; }
-.meta { font-size: 0.76rem; color: rgba(63, 74, 87, 0.65); margin-bottom: 10px; font-weight: 500; }
+.meta { font-size: 0.76rem; color: rgba(63, 74, 87, 0.68); margin-bottom: 10px; font-weight: 500; }
 .card p, .card li { font-size: 0.86rem; font-weight: 300; }
 .card ul { padding-left: 18px; }
 .card li { margin-bottom: 4px; }
 
-/* Projects Section (Pyramid / Staircase Shape over Sam Turret Background) */
-.dark {
+/* Unified Projects + Trade-Offs Section: ONE Single Unbroken SAM Turret Background */
+.dark-unified {
   position: relative;
   background: var(--darker);
   color: #e6ecf3;
   overflow: hidden;
+  padding: 88px 0 96px;
 }
-.proj-bg-layer {
+.proj-bg-single {
   position: absolute;
   inset: 0;
-  background: url("images/sam turret.jpeg") center / cover no-repeat;
-  opacity: 0.28;
-  filter: contrast(1.15);
+  z-index: 0;
   pointer-events: none;
-  z-index: 1;
 }
-.dark .wrap { position: relative; z-index: 2; }
-.dark h2, .dark h3 { color: #fff; }
-.dark .eyebrow { color: rgba(213, 221, 231, 0.75); }
+.proj-bg-single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.42;
+  filter: contrast(1.12);
+}
+.dark-unified .wrap { position: relative; z-index: 2; }
+.dark-unified h2, .dark-unified h3 { color: #fff; }
+.dark-unified .eyebrow { color: rgba(213, 221, 231, 0.85); }
 
+/* Staircase / Pyramid Project Cards */
 .pyramid-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 900px;
+  gap: 22px;
+  max-width: 1020px;
   margin: 0 auto;
 }
 .proj-stair {
   position: relative;
-  border: 1px solid rgba(213, 221, 231, 0.35);
+  border: 1px solid rgba(213, 221, 231, 0.38);
   border-radius: 18px;
-  padding: 26px;
+  padding: 28px 30px;
   cursor: pointer;
   text-align: left;
   color: #fff;
   font: inherit;
   overflow: hidden;
   transition: 0.35s;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  background: rgba(20, 26, 34, 0.75);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.5);
+  min-height: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.proj-stair .stair-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.72;
+  transition: transform 0.5s ease, opacity 0.35s ease;
+}
+.proj-stair:hover .stair-art {
+  transform: scale(1.04);
+  opacity: 0.88;
 }
 .proj-stair::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(24, 30, 38, 0.95) 35%, rgba(24, 30, 38, 0.78) 75%, rgba(24, 30, 38, 0.45));
-  transition: 0.35s;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(18, 24, 32, 0.94) 28%, rgba(18, 24, 32, 0.72) 62%, rgba(18, 24, 32, 0.20) 100%);
 }
 .proj-stair:hover { transform: translateY(-4px); border-color: var(--gold); }
-.proj-stair > * { position: relative; z-index: 2; }
+.proj-stair > *:not(.stair-art) { position: relative; z-index: 2; }
 .proj-stair small {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
@@ -374,38 +440,35 @@ h2 {
   color: var(--gold);
   font-weight: 600;
 }
-.proj-stair h3 { font-size: 1.3rem; margin: 4px 0 6px; }
-.proj-stair p { font-size: 0.86rem; font-weight: 300; opacity: 0.9; max-width: 600px; }
+.proj-stair h3 { font-size: 1.38rem; margin: 4px 0 6px; color: #fff; }
+.proj-stair p { font-size: 0.88rem; font-weight: 300; opacity: 0.94; max-width: 560px; }
 .proj-stair em {
   display: inline-block;
   margin-top: 10px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-style: normal;
   font-weight: 500;
   color: #6ee7b7;
 }
 
-.step-1 { width: 70%; align-self: flex-start; }
-.step-2 { width: 85%; align-self: center; }
-.step-3 { width: 98%; align-self: flex-end; }
+.step-1 { width: 66%; align-self: flex-start; }
+.step-2 { width: 82%; align-self: flex-start; }
+.step-3 { width: 100%; align-self: flex-start; }
 @media (max-width: 768px) {
-  .step-1, .step-2, .step-3 { width: 100%; align-self: stretch; }
+  .step-1, .step-2, .step-3 { width: 100%; }
 }
 
-/* Parallax Band */
-.parallax-band {
-  position: relative;
-  padding: 96px 0;
-  color: #fff;
+/* Integrated Trade-Offs Block */
+.tradeoffs-sub {
+  margin-top: 72px;
+  padding-top: 56px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   text-align: center;
-  background:
-    linear-gradient(180deg, rgba(35, 43, 54, 0.82), rgba(35, 43, 54, 0.86)),
-    url("images/sam turret.jpeg") center / cover fixed;
 }
-.parallax-band h2 { color: #fff; margin-bottom: 16px; }
-.parallax-band p {
-  max-width: 720px;
-  margin: 0 auto 32px;
+.tradeoffs-sub h2 { color: #fff; margin-bottom: 14px; }
+.tradeoffs-sub p {
+  max-width: 740px;
+  margin: 0 auto 30px;
   font-weight: 300;
   font-size: 1.02rem;
   color: rgba(255,255,255,0.9);
@@ -414,134 +477,268 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 36px;
+  gap: 42px;
 }
 .stat-box strong {
   display: block;
   font-family: 'Lato', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: var(--gold);
 }
 .stat-box span {
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
-/* Field Grid */
+/* Section Full-Bleed Background Helper */
+.bg-sec {
+  position: relative;
+  overflow: hidden;
+  background: #e6ecf3;
+}
+.sec-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  opacity: 0.34;
+  pointer-events: none;
+}
+.bg-sec .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+/* In The Field Photo Grid */
 .field {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
 }
-.field figure {
+.field-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+.field figure, .field-4 figure {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  height: 310px;
-  box-shadow: 0 6px 20px rgba(63, 74, 87, 0.12);
+  height: 320px;
+  background: #232b36;
+  box-shadow: 0 8px 24px rgba(35, 43, 54, 0.18);
 }
-.field img {
+.field img, .field-4 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
-.field figure:hover img { transform: scale(1.07); }
-.field figcaption {
+.field figure:hover img, .field-4 figure:hover img { transform: scale(1.06); }
+.field figcaption, .field-4 figcaption {
   position: absolute;
   inset: auto 0 0;
-  padding: 40px 16px 14px;
+  padding: 48px 18px 16px;
   color: #fff;
-  font-size: 0.82rem;
-  font-weight: 500;
-  background: linear-gradient(transparent, rgba(24, 30, 38, 0.92));
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+  background: linear-gradient(transparent, rgba(18, 24, 32, 0.92) 45%, rgba(18, 24, 32, 0.98));
+}
+.field figcaption strong, .field-4 figcaption strong {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 3px;
 }
 
-/* Skills Hover Grid with sit.jpg background */
-.skills-sec {
-  position: relative;
-  background:
-    linear-gradient(rgba(233, 238, 244, 0.90), rgba(233, 238, 244, 0.90)),
-    url("images/WhatsApp Image 2026-10-30 at 11.42.09 PM (3).jpeg") center / cover;
-}
-.skills {
+/* Leadership Cards */
+.lead {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
 }
-.skill {
+.lead-card {
   position: relative;
-  background: #fff;
-  border: 1px solid var(--pale);
   border-radius: 18px;
-  padding: 28px 22px;
-  min-height: 210px;
   overflow: hidden;
+  padding: 30px 24px;
+  color: #fff;
+  background: #232b36;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: 0.35s;
+  box-shadow: 0 10px 28px rgba(24, 30, 38, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
-.skill-bg {
+.lead-card .lead-bg {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.16;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.68;
+  transition: transform 0.5s ease, opacity 0.4s ease;
+}
+.lead-card:hover .lead-bg { transform: scale(1.06); opacity: 0.82; }
+.lead-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(18,24,32,0.18), rgba(18,24,32,0.92));
+}
+.lead-card > *:not(.lead-bg) { position: relative; z-index: 2; }
+.lead-card h4 { color: #fff; font-size: 1.18rem; margin-bottom: 6px; }
+.lead-card p { font-size: 0.86rem; font-weight: 300; opacity: 0.95; }
+
+/* Symmetrical 6-Card Multi-Colored Skills Grid */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 980px) {
+  .skills { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .skills { grid-template-columns: 1fr; }
+}
+.skill {
+  position: relative;
+  border-radius: 20px;
+  padding: 28px 24px 26px;
+  min-height: 255px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 30px rgba(18, 24, 32, 0.22);
+}
+.skill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent, #38bdf8);
+  z-index: 3;
+}
+.skill-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
   transition: opacity 0.45s ease, transform 0.6s ease;
+  z-index: 0;
 }
 .skill::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.93));
-  transition: 0.45s;
+  z-index: 1;
+  background: var(--grad, linear-gradient(145deg, rgba(15, 23, 42, 0.90), rgba(30, 58, 138, 0.82)));
+  transition: opacity 0.4s ease;
 }
-.skill:hover .skill-bg { opacity: 1; transform: scale(1.06); }
-.skill:hover::after {
-  background: linear-gradient(180deg, rgba(28,36,46,0.35), rgba(28,36,46,0.88));
+.skill:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px rgba(18, 24, 32, 0.35);
 }
-.skill > div { position: relative; z-index: 2; transition: color 0.35s; }
+.skill:hover .skill-img {
+  opacity: 0.52;
+  transform: scale(1.06);
+}
+.skill > div {
+  position: relative;
+  z-index: 2;
+}
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.skill-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--accent, #fff);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(4px);
+}
 .skill h4 {
-  font-size: 0.98rem;
-  letter-spacing: 0.1em;
+  color: #fff;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 8px;
-  transition: color 0.35s;
 }
-.skill p { font-size: 0.84rem; font-weight: 300; }
-.skill:hover > div, .skill:hover h4 { color: #fff; }
-
-/* Leadership Cards */
-.lead {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+.skill p {
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 14px;
+  line-height: 1.55;
 }
-.lead-card {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  padding: 28px 24px;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  min-height: 170px;
+.skill-pills {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 6px;
 }
-.lead-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(35,43,54,0.88), rgba(63,74,87,0.68));
+.skill-pills span {
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
-.lead-card > * { position: relative; z-index: 2; }
-.lead-card h4 { color: #fff; font-size: 1.12rem; margin-bottom: 6px; }
-.lead-card p { font-size: 0.86rem; font-weight: 300; opacity: 0.92; }
+
+/* 6 Multi-Colored Skill Themes */
+.skill.c-blue {
+  --accent: #38BDF8;
+  --grad: linear-gradient(145deg, rgba(12, 26, 48, 0.92), rgba(3, 105, 161, 0.80));
+}
+.skill.c-emerald {
+  --accent: #34D399;
+  --grad: linear-gradient(145deg, rgba(10, 34, 29, 0.92), rgba(5, 122, 85, 0.80));
+}
+.skill.c-violet {
+  --accent: #C084FC;
+  --grad: linear-gradient(145deg, rgba(28, 18, 48, 0.92), rgba(109, 40, 217, 0.80));
+}
+.skill.c-amber {
+  --accent: #FBBF24;
+  --grad: linear-gradient(145deg, rgba(38, 24, 12, 0.92), rgba(180, 83, 9, 0.80));
+}
+.skill.c-rose {
+  --accent: #FB7185;
+  --grad: linear-gradient(145deg, rgba(42, 14, 24, 0.92), rgba(190, 18, 60, 0.80));
+}
+.skill.c-teal {
+  --accent: #2DD4BF;
+  --grad: linear-gradient(145deg, rgba(13, 32, 36, 0.92), rgba(15, 118, 110, 0.80));
+}
 
 /* Modals */
 dialog {
@@ -627,6 +824,7 @@ footer .btn { margin: 5px; }
       <a href="#field">In the Field</a>
       <a href="#leadership">Leadership</a>
       <a href="#skills">AI &amp; Skills</a>
+      <a href="#perspective">Perspective</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="status-pill">
@@ -636,12 +834,24 @@ footer .btn { margin: 5px; }
   </div>
 </header>
 
-<!-- Splash Hero with Rocket + Plane Lock + Carrier -->
+<!-- Splash Hero: Left (SpaceX Rocket Launch), Center (Plane Lock HUD), Right (Aircraft Carrier Launch) -->
 <div class="hero" id="top">
   <div class="hero-bg-collage">
-    <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3)_3.jpg" alt="Rocket Launch">
-    <img src="images/lock plane.jpeg" alt="Plane Lock HUD">
-    <img src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM_4.jpeg" alt="Carrier Launch">
+    <div class="hero-pane">
+      <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3).jpeg"
+           data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (3).jpg|images/hero.jpg|images/sam turret.jpeg"
+           alt="SpaceX Rocket Launch">
+    </div>
+    <div class="hero-pane">
+      <img src="images/lock plane.jpeg"
+           data-fallbacks="images/lock plane.jpg|images/WhatsApp Image 2026-10-31 at 12.41.05 AM.jpeg"
+           alt="Fighter Jet Target Lock HUD">
+    </div>
+    <div class="hero-pane">
+      <img src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpeg"
+           data-fallbacks="images/carrier-launch.jpg|images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpg|images/plane.jpg"
+           alt="Carrier Launch HUD">
+    </div>
   </div>
   <div class="wrap">
     <div>
@@ -650,7 +860,7 @@ footer .btn { margin: 5px; }
         <span class="chip">Computer Vision</span>
         <span class="chip">Algorithmic Finance</span>
       </div>
-      <h1>I BUILD &amp;<br>I LEAD.</h1>
+      <h1>INNOVATION,<br>ACTION,<br>EXECUTION.</h1>
       <p>Applied AI &amp; Analytics student at Temasek Polytechnic. I architect human-in-the-loop AI agents, lead technical hackathon teams, and teach 50+ students how to use generative AI responsibly.</p>
       <div class="btns">
         <a class="btn primary" href="#experience">Explore Portfolio</a>
@@ -668,13 +878,15 @@ footer .btn { margin: 5px; }
       <div class="orbit-outer"></div>
       <div class="orbit-inner"></div>
       <div class="ring">
-        <img src="images/portrait.jpg" alt="Portrait of Asher Heng in a navy suit">
+        <img src="images/portrait.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.09 PM (1).jpeg"
+             alt="Portrait of Asher Heng in a navy suit">
       </div>
     </div>
   </div>
 </div>
 
-<!-- Experience with Transparent Video Background -->
+<!-- Experience Section: Full Original Color Video Background + Sticky Top-Left Title -->
 <section id="experience" class="exp-sec">
   <div class="video-bg-wrap">
     <video autoplay muted loop playsinline>
@@ -682,12 +894,16 @@ footer .btn { margin: 5px; }
     </video>
   </div>
   <div class="wrap">
-    <div class="eyebrow">Applied AI · FinTech · Robotics</div>
-    <h2>Experience</h2>
+    <div class="sticky-title-bar">
+      <div class="eyebrow">Applied AI · FinTech · Robotics</div>
+      <h2>Experience</h2>
+    </div>
     <div class="grid-3">
       <article class="card fade">
         <div class="card-img">
-          <img src="images/sutd.jpg" alt="SUTD campus" loading="lazy">
+          <img src="images/sutd.jpg"
+               data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.08 PM (2).jpeg"
+               alt="SUTD campus" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Teaching &amp; Facilitation</span>
@@ -699,7 +915,9 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/techweek.jpg" alt="Tech Week Singapore AI Stage" loading="lazy">
+          <img src="images/techweek.jpg"
+               data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.10 PM.jpg|images/WhatsApp Image 2026-10-30 at 11.42.10 PM.jpeg"
+               alt="Tech Week Singapore AI Stage" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Hackathon · IBM</span>
@@ -715,7 +933,9 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-31 at 1.37.03 AM.jpeg" alt="TIL-AI Missile Turret System" loading="lazy">
+          <img src="images/cv planes.jpeg"
+               data-fallbacks="images/WhatsApp Image 2026-10-31 at 1.37.03 AM.jpeg|images/sam turret.jpeg"
+               alt="TIL-AI Computer Vision Aircraft Detection" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Hackathon · DSTA</span>
@@ -731,212 +951,411 @@ footer .btn { margin: 5px; }
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1)_3.jpg" alt="Robotics insights in Shanghai University" loading="lazy">
+          <img src="images/shanghai u.jpg"
+               data-fallbacks="images/shanghai u.jpeg|images/ehang.jpg|images/robots.jpg"
+               alt="Shanghai University Robotics & ML Exchange" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Robotics &amp; Global R&amp;D</span>
           <h3>Shanghai University Robotics Insights</h3>
-          <div class="meta">Shanghai Study Trip · R&amp;D Exchange</div>
-          <p>Furthered insights in Shanghai, meeting with the head of machine learning, networking with the school principal, and collaborating with robotics enthusiasts.</p>
+          <div class="meta">Shanghai Study Trip · Academic &amp; ML Exchange</div>
+          <p>Furthered robotics and AI insights at Shanghai University, meeting with the head in charge of Machine Learning, networking with the university principal, and collaborating with fellow robotics enthusiasts.</p>
         </div>
       </article>
 
       <article class="card fade">
         <div class="card-img">
-          <img src="images/pan sit.jpg" alt="Brainstorming with DSTA & Panasonic personnel in North-East Singapore" loading="lazy">
+          <img src="images/pan sit.jpg"
+               data-fallbacks="images/pan sit.jpeg|images/panasonic.jpg|images/WhatsApp Image 2026-10-30 at 11.42.08 PM (3).jpg"
+               alt="Brainstorming with DSTA & Panasonic personnel in North-East Singapore" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Technical &amp; Mentorship</span>
           <h3>Industry Innovation Labs</h3>
-          <div class="meta">DSTA &amp; Panasonic Collaboration</div>
-          <p>Worked closely with industry personnel and DSTA/Panasonic teams in Singapore's North-East to brainstorm automation topics and co-design robotics workflows.</p>
+          <div class="meta">DSTA &amp; Panasonic · North-East Singapore</div>
+          <p>Worked closely with DSTA personnel and Panasonic R&amp;D engineers in Singapore's North-East to brainstorm automation topics and co-design industrial robotics workflows.</p>
         </div>
       </article>
 
       <article class="card fade">
-        <div class="card-img">
-          <img src="images/WhatsApp Image 2026-10-31 at 12.33.57 AM.jpeg" alt="SIM Stage Talk with Manta Go & Meta" loading="lazy">
+        <div class="card-img" style="display:grid; grid-template-columns:1.2fr 1fr; gap:2px;">
+          <img src="images/WhatsApp Image 2026-10-31 at 12.33.57 AM.jpeg"
+               data-fallbacks="images/WhatsApp Image 2026-10-31 at 12.33.57 AM.jpg|images/sim-talk.jpg|images/techweek.jpg"
+               alt="SIM Stage Talk with Manta Go & Meta" loading="lazy">
+          <img src="images/WhatsApp Image 2026-10-31 at 12.33.54 AM.jpeg"
+               data-fallbacks="images/WhatsApp Image 2026-10-31 at 12.33.54 AM.jpg|images/mentor.jpg|images/portrait.jpg"
+               alt="Asher with Andy Low from AI Association Singapore" loading="lazy">
         </div>
         <div class="b">
           <span class="tag">Venture &amp; Partnerships</span>
-          <h3>Manta Go &amp; Meta Partnership</h3>
-          <div class="meta">SIM Panel Presentation</div>
-          <p>Collaborated with Manta Go in partnership with Meta to build advanced chatbots, and connected with leaders like Andy Low from the AI Association Singapore.</p>
+          <h3>Manta Go, Meta &amp; AI Association SG</h3>
+          <div class="meta">SIM Panel &amp; Industry Networking</div>
+          <p>Collaborated with Manta Go in partnership with Meta at SIM to build chatbots, and connected with leaders from the AI Association Singapore including Andy Low.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- Projects (Pyramid / Staircase Shape over Sam Turret Background) -->
-<section id="projects" class="dark">
-  <div class="proj-bg-layer"></div>
+<!-- Projects Section: Single Unbroken SAM Turret Background + Staircase Cards -->
+<section id="projects" class="dark dark-unified">
+  <div class="proj-bg-single">
+    <img src="images/sam turret.jpeg"
+         data-fallbacks="images/WhatsApp Image 2026-10-31 at 1.37.03 AM.jpeg|images/sam turret.jpg"
+         alt="SAM Turret Background">
+  </div>
   <div class="wrap">
-    <div class="eyebrow">Interactive Prototypes</div>
-    <h2>Projects</h2>
+    <div class="sticky-title-bar">
+      <div class="eyebrow">Interactive Prototypes</div>
+      <h2>Projects</h2>
+    </div>
     
     <div class="pyramid-grid">
-      <!-- Step 1: Top Shortest Block (Custom FPV Drone with drone fpv.jpg) -->
-      <button class="proj-stair step-1 fade" data-m="m3" style="background-image:url('images/drone fpv.jpg')">
+      <!-- Step 1: Shortest Block (Custom FPV Drone) -->
+      <button class="proj-stair step-1 fade" data-m="m3">
+        <img class="stair-art"
+             src="images/drone fpv.jpg"
+             data-fallbacks="images/drone fpv.jpeg|images/ehang.jpg|images/robots.jpg"
+             alt="Custom FPV Drone">
         <small>Hardware &amp; Telemetry</small>
         <h3>Custom FPV Drone</h3>
         <p>Designed, soldered, and tuned from scratch—bridging software control loops with real-world flight mechanics.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <!-- Step 2: Middle Medium Block (AI Study App with study app.webp) -->
-      <button class="proj-stair step-2 fade" data-m="m2" style="background-image:url('images/study app.webp')">
+      <!-- Step 2: Medium Block (AI Study App) -->
+      <button class="proj-stair step-2 fade" data-m="m2">
+        <img class="stair-art"
+             src="images/study app.webp"
+             data-fallbacks="images/study app.png|images/study app.jpg|images/robots.jpg"
+             alt="AI Study App Interface">
         <small>Full-Stack AI</small>
         <h3>AI Study App</h3>
         <p>Notion-style workspace with computer-vision OCR, Gemini API flashcard generation, and translation into 5 languages on AWS.</p>
         <em>View technical breakdown →</em>
       </button>
 
-      <!-- Step 3: Bottom Longest Block (Trading System) -->
-      <button class="proj-stair step-3 fade" data-m="m1" style="background-image:url('images/cv planes.jpeg')">
+      <!-- Step 3: Longest Block (Trading System) -->
+      <button class="proj-stair step-3 fade" data-m="m1">
+        <img class="stair-art"
+             src="images/cv planes.jpeg"
+             data-fallbacks="images/cv planes.jpg|images/lock plane.jpeg"
+             alt="Trading System & Computer Vision">
         <small>Autonomous Markets</small>
         <h3>Trading System</h3>
         <p>UiPath bot with web scraping that tracks stock prices and triggers simulated trades, paired with a backpropagation neural network on historical market data.</p>
         <em>View technical breakdown →</em>
       </button>
     </div>
+
+    <div class="tradeoffs-sub fade">
+      <div class="eyebrow" style="justify-content:center;color:var(--pale);margin-bottom:8px;">Commercial Instinct · Engineering Rigor</div>
+      <h2>Built for Real-World Trade-Offs</h2>
+      <p>Growing up around a family business taught me commercial thinking early. Whether I'm designing deterministic guardrails for enterprise AI agents, testing algorithmic strategies on NASDAQ-100 futures, or evaluating autonomous aircraft, I focus on systems that are reliable, auditable, and practical.</p>
+      <div class="stat-row">
+        <div class="stat-box"><strong>50+</strong><span>Students Taught at SUTD</span></div>
+        <div class="stat-box"><strong>50+</strong><span>Cooking Club Members Led</span></div>
+        <div class="stat-box"><strong>5</strong><span>Languages in AI Study App</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Parallax Band -->
-<div class="parallax-band">
-  <div class="wrap fade">
-    <div class="eyebrow" style="justify-content:center;color:var(--pale)">Commercial Instinct · Engineering Rigor</div>
-    <h2>Built for Real-World Trade-Offs</h2>
-    <p>Growing up around a family business taught me commercial thinking early. Whether I'm designing deterministic guardrails for enterprise AI agents, testing algorithmic strategies on NASDAQ-100 futures, or evaluating autonomous aircraft, I focus on systems that are reliable, auditable, and practical.</p>
-    <div class="stat-row">
-      <div class="stat-box"><strong>50+</strong><span>Students Taught at SUTD</span></div>
-      <div class="stat-box"><strong>50+</strong><span>Cooking Club Members Led</span></div>
-      <div class="stat-box"><strong>5</strong><span>Languages in AI Study App</span></div>
+<!-- In The Field: Aircraft Carrier HUD Background -->
+<section id="field" class="bg-sec">
+  <img class="sec-bg-img"
+       src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpeg"
+       data-fallbacks="images/carrier-launch.jpg|images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpg|images/lock plane.jpeg"
+       alt="Aircraft Carrier HUD Background">
+  <div class="wrap">
+    <div class="sticky-title-bar">
+      <div class="eyebrow">Networks, Robotics &amp; Aviation</div>
+      <h2>In the Field</h2>
     </div>
-  </div>
-</div>
-
-<!-- In The Field (Featuring RoboMaster / Robotics card & correct images) -->
-<section id="field" style="position:relative; overflow:hidden;">
-  <div style="position:absolute; inset:0; background:url('images/sam turret.jpeg') center/cover no-repeat; opacity:0.12; pointer-events:none; z-index:0;"></div>
-  <div class="wrap" style="position:relative; z-index:2;">
-    <div class="eyebrow">Networks, Robotics &amp; Aviation</div>
-    <h2>In the Field</h2>
     <div class="field">
       <figure class="fade">
-        <img src="images/panasonic.jpg" alt="Panasonic Works site engagement" loading="lazy">
-        <figcaption>Panasonic Works: Robotics R&amp;D</figcaption>
+        <img src="images/plane.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.05 PM.jpg|images/WhatsApp Image 2026-10-30 at 11.42.05 PM.jpeg"
+             alt="Asher beside Diamond DA62 twin-engine aircraft at Seletar Airfield" loading="lazy">
+        <figcaption>
+          <strong>Seletar Airfield: Diamond DA62 &amp; Flight Sim</strong>
+          Hands-on aviation and flight simulation experience with twin-engine Diamond DA62 aircraft at Seletar Aerospace Park.
+        </figcaption>
       </figure>
+
       <figure class="fade">
-        <img src="images/lenovo robo.jpeg" alt="Lenovo Future Center site visit" loading="lazy">
-        <figcaption>Lenovo Future Center: Robotics Site Visit</figcaption>
+        <img src="images/ehang.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (2).jpg|images/WhatsApp Image 2026-10-30 at 11.42.10 PM (2).jpeg"
+             alt="Asher with EHang autonomous aerial vehicle" loading="lazy">
+        <figcaption>
+          <strong>EHang &amp; Tactical / Firefighting Drone Systems</strong>
+          Site visits to EHang and unmanned aerial robotics companies covering autonomous passenger AAVs, firefighting drones, and military-grade UAV platforms.
+        </figcaption>
       </figure>
+
       <figure class="fade">
-        <img src="images/carrier-launch.jpg" alt="Aircraft carrier launch" loading="lazy">
-        <figcaption>Carrier Launch Operations</figcaption>
+        <img src="images/google.jpeg"
+             data-fallbacks="images/google.jpg"
+             alt="Asher and team at Google Cloud Agentic AI Showcase" loading="lazy">
+        <figcaption>
+          <strong>Google Cloud: Industry Agentic AI</strong>
+          Engaging with Google Cloud teams on multi-agent orchestration, Gemini Live APIs, and enterprise agentic AI functions.
+        </figcaption>
       </figure>
+
       <figure class="fade">
-        <img src="images/google.jpg" alt="Google Cloud Hackathon Showcase Team" loading="lazy">
-        <figcaption>Google Cloud AI Hackathon Showcase</figcaption>
+        <img src="images/robots.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1).jpg|images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1).jpeg"
+             alt="RoboMaster competition robots" loading="lazy">
+        <figcaption>
+          <strong>RoboMaster: Competition Robotics</strong>
+          Brainstorming mechanical, telemetry, and computer-vision targeting solutions for omni-directional competition robots.
+        </figcaption>
       </figure>
+
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1)_4.jpg" alt="RoboMaster competition robotics brainstorming" loading="lazy">
-        <figcaption>RoboMaster: Brainstorming Solutions for Competition Robots</figcaption>
+        <img src="images/lenovo robo.jpeg"
+             data-fallbacks="images/lenovo robo.jpg|images/panasonic.jpg"
+             alt="Lenovo Future Center robotics site visit" loading="lazy">
+        <figcaption>
+          <strong>Lenovo Future Center: Quadruped Robotics</strong>
+          On-site evaluation of Lenovo Daystar Bot GS quadruped platforms and autonomous industrial inspection systems.
+        </figcaption>
+      </figure>
+
+      <figure class="fade">
+        <img src="images/panasonic.jpg"
+             data-fallbacks="images/pan sit.jpg|images/WhatsApp Image 2026-10-30 at 11.42.08 PM (3).jpg"
+             alt="Panasonic R&D Center autonomous mobile robot" loading="lazy">
+        <figcaption>
+          <strong>Panasonic R&amp;D: Autonomous Mobile Robots</strong>
+          Collaborating with Panasonic Works engineers to evaluate AMRs and human-robot interaction workflows.
+        </figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- Leadership & CCAs with Carrier Background Shared -->
-<section id="leadership" style="position:relative; overflow:hidden; padding-top:0;">
-  <div style="position:absolute; inset:0; background:url('images/carrier-launch.jpg') center/cover no-repeat; opacity:0.12; pointer-events:none; z-index:0;"></div>
-  <div class="wrap" style="position:relative; z-index:2;">
-    <div class="eyebrow">Beyond the Classroom</div>
-    <h2>Leadership &amp; CCAs</h2>
+<!-- Leadership & CCAs: Uses Former Founder Card Image (sutd.jpg) as Section Background + TCA Group Photo (cooking club.jpg) Inside Founder Card -->
+<section id="leadership" class="bg-sec">
+  <img class="sec-bg-img"
+       src="images/sutd.jpg"
+       data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.08 PM (2).jpeg|images/WhatsApp Image 2026-10-30 at 11.42.09 PM (2).jpeg"
+       alt="Campus Architecture Background">
+  <div class="wrap">
+    <div class="sticky-title-bar">
+      <div class="eyebrow">Beyond the Classroom</div>
+      <h2>Leadership &amp; CCAs</h2>
+    </div>
     <div class="lead fade">
-      <div class="lead-card" style="background-image:url('images/sutd.jpg')">
+      <div class="lead-card">
+        <img class="lead-bg"
+             src="images/cooking club.jpg"
+             data-fallbacks="images/cooking club.jpeg|images/WhatsApp Image 2026-10-30 at 11.42.09 PM.jpg|images/sutd.jpg"
+             alt="Temasek Cooking Club at Temasek Culinary Academy">
         <h4>Founder &amp; President, Temasek Cooking Club</h4>
-        <p>Grew the club to 50+ members and led the finance and socials committees.</p>
+        <p>Founded and grew the club to 50+ members, leading the finance and socials committees and organizing culinary masterclasses at the Temasek Culinary Academy.</p>
       </div>
-      <div class="lead-card" style="background-image:url('images/robots.jpg')">
+      <div class="lead-card">
+        <img class="lead-bg"
+             src="images/robots.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.10 PM (1).jpeg"
+             alt="Robotics CCA">
         <h4>Team Leader, Robotics CCA</h4>
-        <p>Led the competition team in the Lego Mindstorms robotics challenge.</p>
+        <p>Led the competition team in the Lego Mindstorms and autonomous robotics challenges.</p>
       </div>
-      <div class="lead-card" style="background-image:url('images/lock plane.jpeg')">
+      <div class="lead-card">
+        <img class="lead-bg"
+             src="images/lock plane.jpeg"
+             data-fallbacks="images/cv planes.jpeg"
+             alt="Makers Club">
         <h4>Makers Club</h4>
-        <p>3D printing, rapid prototyping, and CAD modelling with Tinkercad.</p>
+        <p>3D printing, rapid hardware prototyping, and CAD modelling with Tinkercad.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- AI Skills & Prompt Engineering with sit.jpg (11.42.09 PM (3)) background -->
-<section id="skills" class="skills-sec">
+<!-- AI Skills & Prompt Engineering: Waves at Sunset Background + Symmetrical 6-Card Multi-Colored Grid -->
+<section id="skills" class="bg-sec">
+  <img class="sec-bg-img"
+       src="images/WhatsApp Image 2026-10-30 at 11.42.07 PM.jpg"
+       data-fallbacks="images/hero.jpg|images/WhatsApp Image 2026-10-30 at 11.42.07 PM.jpeg|images/WhatsApp Image 2026-10-30 at 11.42.08 PM (1).jpg|images/g3.jpg"
+       alt="Sunset Waves & Coastal Cliffs Background"
+       style="opacity:0.42;">
   <div class="wrap">
-    <div class="eyebrow">Technical Core &amp; Prompt Engineering</div>
-    <h2>Skills</h2>
+    <div class="sticky-title-bar">
+      <div class="eyebrow">Technical Core &amp; Prompt Engineering</div>
+      <h2>Skills</h2>
+    </div>
     <div class="skills">
-      <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/cv planes.jpeg')"></div>
+      <!-- Card 1: AI, ML & Computer Vision -->
+      <div class="skill c-blue fade">
+        <img class="skill-img" src="images/cv planes.jpeg" data-fallbacks="images/lock plane.jpeg" alt="AI & ML">
         <div>
-          <h4>AI &amp; ML</h4>
-          <p>Python, computer vision, OCR, NLP, Hugging Face, Gemini API, neural networks, structured prompt engineering</p>
+          <div class="skill-top">
+            <span class="skill-badge">01 // Core Intelligence</span>
+          </div>
+          <h4>AI, ML &amp; Vision</h4>
+          <p>Training custom object-detection models, OCR document digitization, backpropagation neural networks, and voice/text NLP command pipelines.</p>
+        </div>
+        <div class="skill-pills">
+          <span>Python</span>
+          <span>scikit-learn</span>
+          <span>Hugging Face</span>
+          <span>Gemini API</span>
+          <span>Computer Vision</span>
+          <span>Prompt Engineering</span>
         </div>
       </div>
-      <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/sam turret.jpeg')"></div>
+
+      <!-- Card 2: Agentic Systems & RPA -->
+      <div class="skill c-emerald fade">
+        <img class="skill-img" src="images/techweek.jpg" data-fallbacks="images/google.jpeg|images/google.jpg" alt="Agents & Automation">
         <div>
+          <div class="skill-top">
+            <span class="skill-badge">02 // Autonomous Workflows</span>
+          </div>
           <h4>Agents &amp; Automation</h4>
-          <p>watsonx Orchestrate, IBM Bob, UiPath RPA, web scraping, human-in-the-loop workflows</p>
+          <p>Architecting human-in-the-loop multi-agent planners, automated market web-scraping bots, and enterprise chatbots with deterministic guardrails.</p>
+        </div>
+        <div class="skill-pills">
+          <span>watsonx Orchestrate</span>
+          <span>IBM Bob</span>
+          <span>UiPath RPA</span>
+          <span>Web Scraping</span>
+          <span>Multi-Agent Flows</span>
         </div>
       </div>
-      <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/plane.jpg')"></div>
+
+      <!-- Card 3: Full-Stack, Cloud & Mobile -->
+      <div class="skill c-violet fade">
+        <img class="skill-img" src="images/study app.webp" data-fallbacks="images/sutd.jpg" alt="Build & Deploy">
         <div>
-          <h4>Build &amp; Deploy</h4>
-          <p>Flutter, UI design, Git/GitHub, AWS, Render</p>
+          <div class="skill-top">
+            <span class="skill-badge">03 // Software Engineering</span>
+          </div>
+          <h4>Full-Stack &amp; Cloud</h4>
+          <p>Building responsive cross-platform mobile apps (including schedule optimizer prototypes), interactive ML web apps, relational databases, and cloud deployments.</p>
+        </div>
+        <div class="skill-pills">
+          <span>Flutter &amp; Dart</span>
+          <span>Python &amp; Streamlit</span>
+          <span>JavaScript &amp; Express</span>
+          <span>SQL / MySQL</span>
+          <span>Firebase</span>
+          <span>AWS &amp; Render</span>
         </div>
       </div>
-      <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/carrier-launch.jpg')"></div>
+
+      <!-- Card 4: Unmanned Aircraft & Robotics -->
+      <div class="skill c-amber fade">
+        <img class="skill-img" src="images/drone fpv.jpg" data-fallbacks="images/robots.jpg|images/ehang.jpg" alt="Robotics & Aviation">
         <div>
-          <h4>Markets &amp; Making</h4>
-          <p>TradingView, algorithmic trading, FPV drones, 3D printing (Tinkercad)</p>
+          <div class="skill-top">
+            <span class="skill-badge">04 // Hardware &amp; Flight</span>
+          </div>
+          <h4>Drones, Robotics &amp; Sim</h4>
+          <p>Soldering and tuning custom FPV quadcopters from scratch, engineering SAM-style tracking turrets, omni-drive robotics, and Diamond DA62 flight simulation.</p>
+        </div>
+        <div class="skill-pills">
+          <span>Custom FPV Drones</span>
+          <span>Autonomous Turrets</span>
+          <span>Flight Simulation</span>
+          <span>3D Printing</span>
+          <span>Tinkercad CAD</span>
         </div>
       </div>
-      <div class="skill fade">
-        <div class="skill-bg" style="background-image:url('images/portrait.jpg')"></div>
+
+      <!-- Card 5: Algorithmic Markets & FinTech -->
+      <div class="skill c-rose fade">
+        <img class="skill-img" src="images/WhatsApp Image 2026-10-31 at 12.41.06 AM.jpeg" data-fallbacks="images/sam turret.jpeg|images/plane.jpg" alt="Algorithmic Markets">
         <div>
-          <h4>People</h4>
-          <p>Team leadership, public teaching, bilingual in English and Mandarin</p>
+          <div class="skill-top">
+            <span class="skill-badge">05 // Quantitative Finance</span>
+          </div>
+          <h4>Markets &amp; Strategy</h4>
+          <p>Designing and paper-trading algorithmic strategies on NASDAQ-100 E-mini futures, researching macro and equity structure, and reviewing commercial records.</p>
+        </div>
+        <div class="skill-pills">
+          <span>TradingView</span>
+          <span>NASDAQ-100 Futures</span>
+          <span>Algo Trading</span>
+          <span>Equity Research</span>
+          <span>Commercial Review</span>
+        </div>
+      </div>
+
+      <!-- Card 6: Leadership, Teaching & Community -->
+      <div class="skill c-teal fade">
+        <img class="skill-img" src="images/cooking club.jpg" data-fallbacks="images/portrait.jpg|images/sutd.jpg" alt="People & Leadership">
+        <div>
+          <div class="skill-top">
+            <span class="skill-badge">06 // Human Impact</span>
+          </div>
+          <h4>Leadership &amp; Teaching</h4>
+          <p>Teaching 50+ JC students generative AI at SUTD, founding and leading the 50+ member Temasek Cooking Club, and delivering technical stage pitches.</p>
+        </div>
+        <div class="skill-pills">
+          <span>Founder &amp; President</span>
+          <span>Public Teaching</span>
+          <span>Hackathon Pitching</span>
+          <span>English &amp; Mandarin</span>
+          <span>Culinary Arts</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Perspective with Northern Horizons (g3.jpg) & 11.42.05 IMG -->
-<section id="perspective">
+<!-- Perspective: Arts Monument (Palace of Fine Arts / g4.jpg) as Section Background + Symmetrical 4-Card Row -->
+<section id="perspective" class="bg-sec">
+  <img class="sec-bg-img"
+       src="images/g4.jpg"
+       data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.06 PM (1).jpeg|images/WhatsApp Image 2026-10-30 at 11.42.06 PM (1).jpg"
+       alt="Palace of Fine Arts Monument Background"
+       style="opacity:0.38;">
   <div class="wrap">
-    <div class="eyebrow">Travel &amp; Global Mindset</div>
-    <h2>Perspective</h2>
-    <div class="field">
+    <div class="sticky-title-bar">
+      <div class="eyebrow">Travel &amp; Global Mindset</div>
+      <h2>Perspective</h2>
+    </div>
+    <div class="field-4">
       <figure class="fade">
-        <img src="images/g3.jpg" alt="Northern Horizons" loading="lazy">
-        <figcaption>Northern Horizons &amp; Expedition</figcaption>
+        <img src="images/g3.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.06 PM (2).jpeg"
+             alt="Northern Horizons Sunset over the Sea" loading="lazy">
+        <figcaption>
+          <strong>Northern Horizons</strong>
+          Golden-hour ocean horizons and coastal expeditions.
+        </figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (1).jpeg" alt="Alpine river & mountain peak" loading="lazy">
-        <figcaption>Alpine Summit &amp; Glacier Flow</figcaption>
+        <img src="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (1).jpeg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.05 PM (1).jpg|images/g2.jpg"
+             alt="Alpine river & mountain peak" loading="lazy">
+        <figcaption>
+          <strong>Alpine Summit &amp; Glacier Flow</strong>
+          High-altitude mountain peaks and glacial valleys.
+        </figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/g2.jpg" alt="Alpine meadow" loading="lazy">
-        <figcaption>Swiss Alps: High Altitude</figcaption>
+        <img src="images/g2.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.06 PM.jpeg"
+             alt="Swiss Alps meadow" loading="lazy">
+        <figcaption>
+          <strong>Swiss Alps: High Altitude</strong>
+          Mountain pass and alpine wildflower meadows.
+        </figcaption>
       </figure>
       <figure class="fade">
-        <img src="images/g1.jpg" alt="Waterfall with rainbow" loading="lazy">
-        <figcaption>Pacific Northwest: Cascades</figcaption>
+        <img src="images/g1.jpg"
+             data-fallbacks="images/WhatsApp Image 2026-10-30 at 11.42.07 PM (2).jpeg"
+             alt="Waterfall with rainbow" loading="lazy">
+        <figcaption>
+          <strong>Pacific Northwest: Cascades</strong>
+          Canyon waterfall and mist refraction.
+        </figcaption>
       </figure>
     </div>
   </div>
@@ -986,15 +1405,20 @@ footer .btn { margin: 5px; }
   <p>Designed and built an FPV quadcopter from scratch—linking software control loops and telemetry to real-world aerodynamics.</p>
 </dialog>
 
-<dialog id="m4">
-  <button aria-label="Close">×</button>
-  <small>Apps &amp; UI</small>
-  <h3>Flutter &amp; UI Design</h3>
-  <p><b>Stack:</b> Flutter</p>
-  <p>Responsive mobile application interface design and cross-platform development.</p>
-</dialog>
-
 <script>
+// Automatic multi-extension & filename fallback resolver so no image ever breaks
+document.querySelectorAll('img[data-fallbacks]').forEach(img => {
+  const list = img.dataset.fallbacks.split('|').map(s => s.trim()).filter(Boolean);
+  let idx = 0;
+  img.addEventListener('error', function onErr() {
+    if (idx < list.length) {
+      img.src = list[idx++];
+    } else {
+      img.removeEventListener('error', onErr);
+    }
+  });
+});
+
 document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => document.getElementById(b.dataset.m).showModal());
 document.querySelectorAll('dialog').forEach(d => {
   d.querySelector('button').onclick = () => d.close();
